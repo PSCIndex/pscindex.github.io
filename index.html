@@ -31,46 +31,49 @@
       background-color: #e2e8f0;
       border-radius: 10px;
     }
+
+    /* Custom gradient for Instagram buttons */
+    .btn-instagram {
+      background-image: linear-gradient(to right bottom, #E1306C, #FD1D1D, #FCB045);
+    }
+
+    .btn-instagram:hover {
+      background-image: linear-gradient(to right bottom, #c2295a, #d61a1a, #daa03b);
+    }
   </style>
 </head>
 
 <body class="bg-slate-50 min-h-screen">
-  <!-- Header -->
   <header class="container mx-auto px-4 py-8 md:py-12">
     <h1 class="text-3xl md:text-4xl font-bold text-blue-800">PSCI</h1>
     <p class="text-lg text-slate-600 mt-2">Penn State Communities Index</p>
   </header>
 
-  <!-- Main Content -->
   <main class="container mx-auto px-4 pb-16">
-    <!-- Community Grid -->
     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-      <!-- Community Block -->
       <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
-        <!-- Title -->
-        <h2 class="text-lg font-semibold text-slate-800">Penn State // Community</h2>
+        <h2 class="text-lg font-semibold text-slate-800">Penn State Community</h2>
 
-        <!-- Description -->
         <p class="text-slate-600 text-sm mt-2 flex-grow">
-          Unofficial Penn State Community: Open to all students (freshmen, masters, current, etc.). This is a
-          request-only group. An admin may DM you for proof of affiliation (acceptance letter, ID, PSU email, etc.).
-          We're a helpful, informational space where everyone supports each other. Casual chat is fine, but please stay
+          This unofficial Penn State group is open to all students (freshmen, masters, current, etc.). It's
+          request-only, and an admin may DM you for proof of affiliation (acceptance letter, ID, PSU email, etc.). We're
+          a helpful, informational space where everyone supports each other. Casual chat is fine, but please stay
           respectful!
         </p>
 
-        <!-- Tags (Horizontal Scroll) -->
         <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
           <span
             class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
           <span
+            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Informational</span>
+          <span
             class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
             Only</span>
-          <span
-            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Informational</span>
+          <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">All
+            Students</span>
         </div>
 
-        <!-- Button with Link -->
         <div class="mt-4">
           <a href="https://chat.whatsapp.com/GA5z4nWiwBhH5M2xu44Rsg" target="_blank" rel="noopener noreferrer"
             class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded transition duration-150">
@@ -79,79 +82,369 @@
         </div>
       </div>
 
-      <!-- Community Block -->
       <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
-        <!-- Title -->
-        <h2 class="text-lg font-semibold text-slate-800">PSU'29</h2>
+        <h2 class="text-lg font-semibold text-slate-800">PSU '29</h2>
 
-        <!-- Description -->
         <p class="text-slate-600 text-sm mt-2 flex-grow">
           Unofficial Penn State Class of 2029! 🥳 This is where the magic happens – get ready to be in your most skibidi
-          form! Request to join and let's keep it chaotic but respectful. 🤪
+          form! It's request-only, so hit that button to join and let's keep it chaotic but respectful. 🤪
         </p>
 
-        <!-- Tags (Horizontal Scroll) -->
         <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
           <span
             class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
-          <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">2029
-            Batch</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Super
+            Casual</span>
           <span
             class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
             Only</span>
-          <span
-            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Casual</span>
         </div>
 
-        <!-- Button with Link -->
         <div class="mt-4">
           <a href="https://ig.me/j/AbYpfLmo4M5OsKJD/" target="_blank" rel="noopener noreferrer"
-            class="block w-full bg-linear-to-br from-pink-600 to-orange-600 hover:bg-linear-to-br hover:from-pink-700 hover:to-orange-700 text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded transition duration-150">
             Join Instagram
           </a>
         </div>
       </div>
 
-      <!-- Community Block -->
       <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
-        <!-- Title -->
-        <h2 class="text-lg font-semibold text-slate-800">CS 2029</h2>
+        <h2 class="text-lg font-semibold text-slate-800">PSU '29 (Alternate)</h2>
 
-        <!-- Description -->
         <p class="text-slate-600 text-sm mt-2 flex-grow">
-          PSU CS '29 Unofficial Hub! Request to join for info, laughs, and nerdy memes. We're chill, just be
-          respectful.
+          Another unofficial Penn State Class of 2029 spot! 🦁 This is a super casual intro group where you can connect
+          with your future batchmates. Request to join and dive into the fun!
         </p>
 
-        <!-- Tags (Horizontal Scroll) -->
         <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
           <span
             class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
-          <span class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Comp
-            Sci</span>
-          <span class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">2029
-            Batch</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Casual</span>
           <span
             class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
             Only</span>
-          <span
-            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Casual</span>
         </div>
 
-        <!-- Button with Link -->
         <div class="mt-4">
-          <a href="https://ig.me/j/AbbXuyJsbvUv64NI/" target="_blank" rel="noopener noreferrer"
-            class="block w-full bg-linear-to-br from-pink-600 to-orange-600 hover:bg-linear-to-br hover:from-pink-700 hover:to-orange-700 text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+          <a href="https://ig.me/j/AbbgYqBg2D2Z52DH/" target="_blank" rel="noopener noreferrer"
+            class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded transition duration-150">
             Join Instagram
           </a>
         </div>
       </div>
-      <!-- END Community Blocks -->
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">Penn State '29 (Inactive)</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          This is an unofficial, casual community for the Penn State Class of 2029. While currently inactive, it's still
+          open for request-only joins. A good spot to connect with batchmates if it sparks up again!
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Inactive</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Casual</span>
+          <span
+            class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
+            Only</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://ig.me/j/AbbXuyJsbvUv64NI/" target="_blank" rel="noopener noreferrer"
+            class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">Smeal '29</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          Calling all Smeal students in the Class of 2029! 📊 This unofficial group is a blend of casual chat and
+          helpful information. It's request-only to ensure it stays relevant for Smeal students.
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span class="inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Smeal
+            Students</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Semi-Informational</span>
+          <span
+            class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
+            Only</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://ig.me/j/AbaJReTRHEtB1w_b/" target="_blank" rel="noopener noreferrer"
+            class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">Smeal '29 (Alternate)</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          Smeal '29, but make it Snapchat! 👻 This is the even more casual version of the Smeal community for the Class
+          of 2029. Expect more memes and less formality.
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span class="inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Smeal
+            Students</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Very
+            Casual</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://snapchat.com/t/ZAbNUjb5" target="_blank" rel="noopener noreferrer"
+            class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join Snapchat
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">Engineering '29</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          Future Penn State engineers, Class of 2029! 🛠️ This unofficial group is for you. Expect a mix of casual
+          conversation and helpful engineering-related info. Request to join and connect with your peers.
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span
+            class="inline-block bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Engineering
+            Students</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Semi-Informational</span>
+          <span
+            class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
+            Only</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://ig.me/j/AbZaQ_XnJJxSTYfx/" target="_blank" rel="noopener noreferrer"
+            class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">Engineering '29 (Alternate)</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          Engineers of Penn State '29, here's your more casual hang-out spot on Snapchat! 🚀 Share your thoughts, memes,
+          and connect with your fellow future engineers.
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span
+            class="inline-block bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Engineering
+            Students</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Very
+            Casual</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://snapchat.com/t/zgr33kx4" target="_blank" rel="noopener noreferrer"
+            class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join Snapchat
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">UAE '29</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          An unofficial community for Penn State students from the UAE (Class of 2029)! 🇦🇪 Connect with fellow
+          students, share info, and enjoy some casual chats. Request to join!
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span
+            class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">International</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Semi-Informational</span>
+          <span
+            class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
+            Only</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://ig.me/j/AbblzVBVnn7pD8oo/" target="_blank" rel="noopener noreferrer"
+            class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">ICLC (Indian Students)</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          This WhatsApp group is for Indian students joining Penn State in the Class of 2029. A dedicated space for
+          informational updates and support for our Indian community. No request needed!
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span class="inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Indian
+            Students</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Informational</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://chat.whatsapp.com/LEHPPv1sT4i74he7V1G20a" target="_blank" rel="noopener noreferrer"
+            class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">Parents '29</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          A dedicated WhatsApp group for parents of Penn State Class of 2029 students. Share information, ask questions,
+          and connect with other parents. No request needed!
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span class="inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Parents
+            Only</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Informational</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://chat.whatsapp.com/HNgNFVEETU13pyUjMd6hS0" target="_blank" rel="noopener noreferrer"
+            class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">CS/DS '29</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          Calling all Computer Science & Data Science students for Penn State Class of 2029! 💻 This unofficial hub is a
+          mix of informational discussions, casual chats, and yes, nerdy memes. Be respectful, and request to join!
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span
+            class="inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">CS/DS
+            Students</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Informational</span>
+          <span
+            class="inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Casual</span>
+          <span
+            class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
+            Only</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://ig.me/j/AbakxnmmQAqRmqyN/" target="_blank" rel="noopener noreferrer"
+            class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join Instagram
+          </a>
+        </div>
+      </div>
+
+      <div class="bg-white rounded-lg shadow-sm border border-slate-200 p-5 flex flex-col h-auto">
+        <h2 class="text-lg font-semibold text-slate-800">Summer '29</h2>
+
+        <p class="text-slate-600 text-sm mt-2 flex-grow">
+          Hey, Summer '29 students! ☀️ This unofficial WhatsApp group is specifically for those starting Penn State in
+          the summer. Get informational tips, chat casually, and connect with your early-start peers. Request to join!
+        </p>
+
+        <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+          <span
+            class="inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Active</span>
+          <span class="inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Summer
+            Students</span>
+          <span
+            class="inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Class of
+            2029</span>
+          <span
+            class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Semi-Informational</span>
+          <span
+            class="inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap">Request
+            Only</span>
+        </div>
+
+        <div class="mt-4">
+          <a href="https://chat.whatsapp.com/EQgJu6N7Vo6FAnceQb2zE2" target="_blank" rel="noopener noreferrer"
+            class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded transition duration-150">
+            Join WhatsApp
+          </a>
+        </div>
+      </div>
+
     </div>
   </main>
 
-  <!-- Footer -->
-  <footer class="border-t border-slate-200">
+  <footer class="border-t border-slate-200 mt-12">
     <div class="container mx-auto p-4 text-center text-slate-500 text-sm">
       <p>Made with ❤️ by XelXen</p>
       <p>PSCI is not affiliated with Pennsylvania State University officially</p>
