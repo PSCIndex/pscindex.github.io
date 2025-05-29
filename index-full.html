@@ -84,7 +84,7 @@
 </head>
 
 <body class="bg-slate-50 min-h-screen">
-   <header class="container mx-auto px-4 py-8 md:py-12">
+   <header class="container mx-auto px-4 py-8 md:py-12 text-center">
       <h1 class="text-3xl md:text-4xl font-bold text-blue-800">
          PSCI
       </h1>
@@ -94,12 +94,19 @@
    </header>
 
    <main class="container mx-auto px-4 pb-16">
+      <!-- Search Bar -->
+      <div class="mb-6">
+         <input type="search" id="search-bar" placeholder="Search by name, tag, or description..."
+            class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-150 ease-in-out text-slate-700 placeholder-slate-400 bg-white text-sm" />
+      </div>
+
       <div id="all-tags-bar" class="mb-6 p-4 border bg-white border-slate-200 rounded-xl">
          <h3 class="text-md font-semibold text-slate-700 mb-3">Filter by Tags:</h3>
          <div id="all-tags-container" class="flex flex-wrap gap-2">
             <!-- Tags will be dynamically populated here -->
          </div>
       </div>
+
       <!-- Filter Status Display -->
       <div id="filter-status" class="filter-active hidden">
          <div class="flex flex-wrap items-center justify-between gap-4">
@@ -738,31 +745,27 @@
          constructor() {
             this.activeTags = new Set();
             this.allAvailableTags = new Set();
-            this.currentDate = new Date(); // Set to current date by default
+            this.searchTerm = "";
+            this.currentDate = new Date();
             this.init();
          }
 
          init() {
             this.processCommunityCardsForNewTag();
             this.populateAllTagsBar();
-            this.loadFromURL();
-            this.bindEvents(); // Bind events after tags (including "New!") are processed and populated
+            this.loadFromURLAndSearch();
+            this.bindEvents();
             this.updateDisplay();
          }
 
          isDateWithinLastWeek(dateString) {
-            const cardDate = new Date(dateString + "T00:00:00"); // Ensure consistent time for comparison
-            if (isNaN(cardDate.getTime())) {
-               return false; // Invalid date
-            }
+            const cardDate = new Date(dateString + "T00:00:00");
+            if (isNaN(cardDate.getTime())) return false;
             const sevenDaysAgo = new Date(this.currentDate);
             sevenDaysAgo.setDate(this.currentDate.getDate() - 7);
-
-            // Normalize dates to midnight to compare date parts only
             const normalizedCardDate = new Date(cardDate.getFullYear(), cardDate.getMonth(), cardDate.getDate());
             const normalizedCurrentDate = new Date(this.currentDate.getFullYear(), this.currentDate.getMonth(), this.currentDate.getDate());
             const normalizedSevenDaysAgo = new Date(sevenDaysAgo.getFullYear(), sevenDaysAgo.getMonth(), sevenDaysAgo.getDate());
-
             return normalizedCardDate >= normalizedSevenDaysAgo && normalizedCardDate <= normalizedCurrentDate;
          }
 
@@ -770,15 +773,11 @@
             document.querySelectorAll('.community-card').forEach(card => {
                const dateStr = card.dataset.date;
                let existingTags = card.dataset.tags ? card.dataset.tags.split(',').map(t => t.trim()) : [];
-
                if (dateStr && this.isDateWithinLastWeek(dateStr)) {
-                  // Add "New!" to data-tags if not already present
                   if (!existingTags.includes("New!")) {
                      existingTags.push("New!");
                      card.dataset.tags = existingTags.join(',');
                   }
-
-                  // Add "New!" visual tag to the card if not already present
                   const tagContainer = card.querySelector('.tag-scroll');
                   if (tagContainer && !tagContainer.querySelector('[data-tag="New!"]')) {
                      const newTagSpan = document.createElement('span');
@@ -788,27 +787,23 @@
                      tagContainer.appendChild(newTagSpan);
                   }
                }
-               // Collect all tags for the top bar
                existingTags.forEach(tag => this.allAvailableTags.add(tag));
             });
          }
 
          populateAllTagsBar() {
             const allTagsContainer = document.getElementById('all-tags-container');
-            allTagsContainer.innerHTML = ''; // Clear existing
-
-            // Sort tags alphabetically, with "New!" first if present
+            allTagsContainer.innerHTML = '';
             const sortedTags = Array.from(this.allAvailableTags).sort((a, b) => {
                if (a === "New!") return -1;
                if (b === "New!") return 1;
                return a.localeCompare(b);
             });
-
             sortedTags.forEach(tag => {
                const tagElement = document.createElement('span');
-               tagElement.className = 'tag inline-block bg-slate-100 text-slate-800 text-xs px-2 py-1 rounded-full whitespace-nowrap';
+               tagElement.className = 'tag inline-block bg-slate-200 text-slate-800 text-xs px-2 py-1 rounded-full whitespace-nowrap';
                if (tag === "New!") {
-                  tagElement.classList.add('tag-new'); // Apply special styling for "New!" in the bar
+                  tagElement.classList.add('tag-new');
                }
                tagElement.dataset.tag = tag;
                tagElement.textContent = tag;
@@ -816,19 +811,26 @@
             });
          }
 
-         loadFromURL() {
+         loadFromURLAndSearch() {
             const urlParams = new URLSearchParams(window.location.search);
             const tagsFromURL = urlParams.getAll('tag');
             this.activeTags = new Set(tagsFromURL);
+
+            this.searchTerm = urlParams.get('search') || "";
+            document.getElementById('search-bar').value = this.searchTerm;
          }
 
          bindEvents() {
-            // Bind to all elements with class 'tag' (in cards, in all-tags-bar, and dynamically added "New!" tags)
+            const searchBar = document.getElementById('search-bar');
+            searchBar.addEventListener('input', (e) => {
+               this.searchTerm = e.target.value;
+               this.updateURL();
+               this.updateDisplay();
+            });
+
             document.querySelectorAll('.tag').forEach(tagElement => {
-               // Remove existing event listener to prevent duplicates if re-binding
                const newElement = tagElement.cloneNode(true);
                tagElement.parentNode.replaceChild(newElement, tagElement);
-
                newElement.addEventListener('click', (e) => {
                   e.preventDefault();
                   const tagName = newElement.dataset.tag;
@@ -856,6 +858,8 @@
 
          clearAllFilters() {
             this.activeTags.clear();
+            this.searchTerm = "";
+            document.getElementById('search-bar').value = "";
             this.updateURL();
             this.updateDisplay();
          }
@@ -866,20 +870,27 @@
             this.activeTags.forEach(tag => {
                url.searchParams.append('tag', tag);
             });
+
+            if (this.searchTerm) {
+               url.searchParams.set('search', this.searchTerm);
+            } else {
+               url.searchParams.delete('search');
+            }
+
             window.history.pushState({}, '', url);
          }
 
          updateDisplay() {
             this.updateFilterStatus();
             this.filterCommunities();
-            this.updateAllTagsBarHighlights(); // Highlight active tags in the top bar
+            this.updateAllTagsBarHighlights();
          }
 
          updateFilterStatus() {
             const filterStatusDiv = document.getElementById('filter-status');
             const activeFiltersContainer = document.getElementById('active-filters');
 
-            if (this.activeTags.size === 0) {
+            if (this.activeTags.size === 0 && !this.searchTerm.trim()) {
                filterStatusDiv.classList.add('hidden');
                activeFiltersContainer.innerHTML = '';
                return;
@@ -891,54 +902,72 @@
             this.activeTags.forEach(tag => {
                const tagElement = document.createElement('span');
                tagElement.className = 'inline-block bg-slate-200 text-slate-800 text-sm px-3 py-1 rounded-full';
-               if (tag === "New!") { // Style "New!" in the active filters display
+               if (tag === "New!") {
                   tagElement.classList.add('tag-new');
                   tagElement.classList.remove('bg-slate-200', 'text-slate-800');
                }
                tagElement.textContent = tag;
                activeFiltersContainer.appendChild(tagElement);
             });
+
+            if (this.searchTerm.trim()) {
+               const searchDisplayElement = document.createElement('span');
+               searchDisplayElement.className = 'inline-block bg-gray-200 text-gray-800 text-sm px-3 py-1 rounded-full';
+               searchDisplayElement.textContent = `Search: "${this.searchTerm}"`;
+               activeFiltersContainer.appendChild(searchDisplayElement);
+            }
          }
 
          updateAllTagsBarHighlights() {
             const allTagsContainer = document.getElementById('all-tags-container');
             allTagsContainer.querySelectorAll('.tag').forEach(tagElement => {
                if (this.activeTags.has(tagElement.dataset.tag)) {
-                  // Example: Add a class for active state, e.g., more prominent border or background
-                  tagElement.classList.remove('bg-slate-100');
+                  tagElement.classList.add('ring-2', 'ring-blue-500', 'font-semibold');
+                  tagElement.classList.remove('bg-slate-200');
                   if (tagElement.dataset.tag !== "New!") {
                      tagElement.classList.add('bg-blue-100', 'text-blue-800');
-                     tagElement.classList.add('ring-2', 'ring-blue-500', 'font-semibold');
-                  } else { // Ensure "New!" keeps its specific active styling
-                     tagElement.classList.add('bg-yellow-200', 'text-yellow-800');
-                     tagElement.classList.add('ring-2', 'ring-yellow-500', 'font-semibold');
-                  }
-
-               } else {
-                  tagElement.classList.remove('ring-2', 'ring-blue-500', 'font-semibold');
-                  tagElement.classList.remove('ring-2', 'ring-yellow-500', 'font-semibold');
-                  tagElement.classList.remove('bg-blue-100', 'text-blue-800');
-                  tagElement.classList.remove('bg-yellow-200', 'text-yellow-800');
-                  if (tagElement.dataset.tag !== "New!") {
-                     tagElement.classList.add('bg-slate-100');
                   } else {
-                     // Reset to default "New!" styling if not active
-                     tagElement.classList.add('tag-new'); // Re-apply default new styling
+                     tagElement.classList.add('bg-yellow-200', 'text-yellow-800');
+                  }
+               } else {
+                  tagElement.classList.remove('ring-2', 'ring-blue-500', 'font-semibold', 'bg-blue-100', 'text-blue-800', 'bg-yellow-200', 'text-yellow-800');
+                  if (tagElement.dataset.tag !== "New!") {
+                     tagElement.classList.add('bg-slate-200');
+                  } else {
+                     tagElement.classList.add('tag-new');
                   }
                }
             });
          }
 
          filterCommunities() {
-            document.querySelectorAll('.community-card').forEach(card => {
-               if (this.activeTags.size === 0) {
-                  card.classList.remove('hidden');
-                  return;
-               }
-               const cardTags = card.dataset.tags ? card.dataset.tags.split(',').map(t => t.trim()) : [];
-               const hasAllSelectedTags = Array.from(this.activeTags).every(activeTag => cardTags.includes(activeTag));
+            const searchTermLower = this.searchTerm.toLowerCase().trim();
 
-               if (hasAllSelectedTags) {
+            document.querySelectorAll('.community-card').forEach(card => {
+               let isVisible = true;
+
+               if (this.activeTags.size > 0) {
+                  const cardTags = card.dataset.tags ? card.dataset.tags.split(',').map(t => t.trim()) : [];
+                  const matchesAllTags = Array.from(this.activeTags).every(activeTag => cardTags.includes(activeTag));
+                  if (!matchesAllTags) {
+                     isVisible = false;
+                  }
+               }
+
+               if (isVisible && searchTermLower) {
+                  const cardTitle = card.querySelector('h2')?.textContent.toLowerCase() || "";
+                  const cardDescription = card.querySelector('p')?.textContent.toLowerCase() || "";
+                  const cardDataTagsString = card.dataset.tags?.toLowerCase() || "";
+
+                  const matchesSearch = cardTitle.includes(searchTermLower) ||
+                     cardDescription.includes(searchTermLower) ||
+                     cardDataTagsString.includes(searchTermLower);
+                  if (!matchesSearch) {
+                     isVisible = false;
+                  }
+               }
+
+               if (isVisible) {
                   card.classList.remove('hidden');
                } else {
                   card.classList.add('hidden');
@@ -952,7 +981,10 @@
       });
 
       window.addEventListener('popstate', () => {
-         new TagFilter(); // Re-initialize to correctly parse URL and update display
+         const filter = new TagFilter();
+         // When navigating back/forward, ensure search bar reflects current state if search is in URL
+         filter.loadFromURLAndSearch();
+         filter.updateDisplay();
       });
    </script>
 </body>
