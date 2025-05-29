@@ -801,7 +801,7 @@
             });
             sortedTags.forEach(tag => {
                const tagElement = document.createElement('span');
-               tagElement.className = 'tag inline-block bg-slate-200 text-slate-800 text-xs px-2 py-1 rounded-full whitespace-nowrap';
+               tagElement.className = 'tag inline-block bg-slate-100 text-slate-800 text-xs px-2 py-1 rounded-full whitespace-nowrap';
                if (tag === "New!") {
                   tagElement.classList.add('tag-new');
                }
@@ -922,17 +922,18 @@
             const allTagsContainer = document.getElementById('all-tags-container');
             allTagsContainer.querySelectorAll('.tag').forEach(tagElement => {
                if (this.activeTags.has(tagElement.dataset.tag)) {
-                  tagElement.classList.add('ring-2', 'ring-blue-500', 'font-semibold');
-                  tagElement.classList.remove('bg-slate-200');
+                  tagElement.classList.remove('bg-slate-100');
                   if (tagElement.dataset.tag !== "New!") {
                      tagElement.classList.add('bg-blue-100', 'text-blue-800');
+                     tagElement.classList.add('ring-2', 'ring-blue-500', 'font-semibold');
                   } else {
                      tagElement.classList.add('bg-yellow-200', 'text-yellow-800');
+                     tagElement.classList.add('ring-2', 'ring-yellow-500', 'font-semibold');
                   }
                } else {
-                  tagElement.classList.remove('ring-2', 'ring-blue-500', 'font-semibold', 'bg-blue-100', 'text-blue-800', 'bg-yellow-200', 'text-yellow-800');
+                  tagElement.classList.remove('ring-2', 'ring-blue-500', 'ring-yellow-500', 'font-semibold', 'bg-blue-100', 'text-blue-800', 'bg-yellow-200', 'text-yellow-800');
                   if (tagElement.dataset.tag !== "New!") {
-                     tagElement.classList.add('bg-slate-200');
+                     tagElement.classList.add('bg-slate-100');
                   } else {
                      tagElement.classList.add('tag-new');
                   }
