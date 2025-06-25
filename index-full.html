@@ -880,16 +880,16 @@
                const dateStr = card.dataset.date;
                let existingTags = card.dataset.tags ? card.dataset.tags.split(',').map(t => t.trim()) : [];
                if (dateStr && this.isDateWithinLastWeek(dateStr)) {
-                  if (!existingTags.includes("New!")) {
-                     existingTags.push("New!");
+                  if (!existingTags.includes("New")) {
+                     existingTags.push("New");
                      card.dataset.tags = existingTags.join(',');
                   }
                   const tagContainer = card.querySelector('.tag-scroll');
-                  if (tagContainer && !tagContainer.querySelector('[data-tag="New!"]')) {
+                  if (tagContainer && !tagContainer.querySelector('[data-tag="New"]')) {
                      const newTagSpan = document.createElement('span');
                      newTagSpan.className = 'tag tag-new inline-block text-xs px-2 py-1 rounded-full whitespace-nowrap';
-                     newTagSpan.dataset.tag = "New!";
-                     newTagSpan.textContent = "New!";
+                     newTagSpan.dataset.tag = "New";
+                     newTagSpan.textContent = "New";
                      tagContainer.appendChild(newTagSpan);
                   }
                }
@@ -901,14 +901,14 @@
             const allTagsContainer = document.getElementById('all-tags-container');
             allTagsContainer.innerHTML = '';
             const sortedTags = Array.from(this.allAvailableTags).sort((a, b) => {
-               if (a === "New!") return -1;
-               if (b === "New!") return 1;
+               if (a === "New") return -1;
+               if (b === "New") return 1;
                return a.localeCompare(b);
             });
             sortedTags.forEach(tag => {
                const tagElement = document.createElement('span');
                tagElement.className = 'tag inline-block bg-slate-100 text-slate-800 text-xs px-2 py-1 rounded-full whitespace-nowrap';
-               if (tag === "New!") {
+               if (tag === "New") {
                   tagElement.classList.add('tag-new');
                }
                tagElement.dataset.tag = tag;
@@ -934,20 +934,24 @@
                this.updateDisplay();
             });
 
-            document.querySelectorAll('.tag').forEach(tagElement => {
-               const newElement = tagElement.cloneNode(true);
-               tagElement.parentNode.replaceChild(newElement, tagElement);
-               newElement.addEventListener('click', (e) => {
-                  e.preventDefault();
-                  const tagName = newElement.dataset.tag;
-                  this.toggleTag(tagName);
+            document.getElementById('all-tags-container').addEventListener('click', (e) => {
+               const tagElement = e.target.closest('.tag');
+               if (tagElement && tagElement.dataset.tag) {
+                  this.toggleTag(tagElement.dataset.tag);
+               }
+            });
+
+            document.querySelectorAll('.community-card .tag-scroll').forEach(container => {
+               container.addEventListener('click', (e) => {
+                  const tagElement = e.target.closest('.tag');
+                  if (tagElement && tagElement.dataset.tag) {
+                     this.toggleTag(tagElement.dataset.tag);
+                  }
                });
             });
 
             const clearFiltersButton = document.getElementById('clear-filters');
-            const newClearFiltersButton = clearFiltersButton.cloneNode(true);
-            clearFiltersButton.parentNode.replaceChild(newClearFiltersButton, clearFiltersButton);
-            newClearFiltersButton.addEventListener('click', () => {
+            clearFiltersButton.addEventListener('click', () => {
                this.clearAllFilters();
             });
          }
@@ -1008,7 +1012,7 @@
             this.activeTags.forEach(tag => {
                const tagElement = document.createElement('span');
                tagElement.className = 'inline-block bg-slate-200 text-slate-800 text-sm px-3 py-1 rounded-full';
-               if (tag === "New!") {
+               if (tag === "New") {
                   tagElement.classList.add('tag-new');
                   tagElement.classList.remove('bg-slate-200', 'text-slate-800');
                }
@@ -1029,7 +1033,7 @@
             allTagsContainer.querySelectorAll('.tag').forEach(tagElement => {
                if (this.activeTags.has(tagElement.dataset.tag)) {
                   tagElement.classList.remove('bg-slate-100');
-                  if (tagElement.dataset.tag !== "New!") {
+                  if (tagElement.dataset.tag !== "New") {
                      tagElement.classList.add('bg-blue-100', 'text-blue-800');
                      tagElement.classList.add('ring-2', 'ring-blue-500', 'font-semibold');
                   } else {
@@ -1038,7 +1042,7 @@
                   }
                } else {
                   tagElement.classList.remove('ring-2', 'ring-blue-500', 'ring-yellow-500', 'font-semibold', 'bg-blue-100', 'text-blue-800', 'bg-yellow-200', 'text-yellow-800');
-                  if (tagElement.dataset.tag !== "New!") {
+                  if (tagElement.dataset.tag !== "New") {
                      tagElement.classList.add('bg-slate-100');
                   } else {
                      tagElement.classList.add('tag-new');
