@@ -9,9 +9,15 @@
    <link rel="preconnect" href="https://fonts.googleapis.com" />
    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+   <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
    <style>
       body {
          font-family: 'Inter', sans-serif;
+      }
+
+      .pscifont {
+         font-family: "Michroma", sans-serif;
+         font-style: normal;
       }
 
       .tag-scroll {
@@ -85,7 +91,7 @@
 
 <body class="bg-slate-50 min-h-screen">
    <header class="container mx-auto px-4 py-8 md:py-12 text-center">
-      <h1 class="text-3xl md:text-4xl font-bold text-blue-800">
+      <h1 class="text-3xl md:text-4xl font-bold pscifont text-blue-800">
          PSCI
       </h1>
       <p class="text-lg text-slate-600 mt-2">
@@ -123,7 +129,7 @@
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="communities-grid">
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Informational,Request Only,All Students" data-date="2025-04-05">
+            data-tags="Informational,All Students" data-date="2025-04-05">
             <h2 class="text-lg font-semibold text-slate-800">
                Penn State Community
             </h2>
@@ -137,15 +143,10 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Informational">Informational</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="All Students">All
@@ -161,7 +162,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Class of 2029,Casual,Request Only" data-date="2025-04-10">
+            data-tags="Class of 2029,Casual" data-date="2025-04-10">
             <h2 class="text-lg font-semibold text-slate-800">PSU '29</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -172,20 +173,15 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">Class of
                   2029</span>
                <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Casual">Super
+                  data-tag="Casual">
                   Casual</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
             </div>
 
             <div class="mt-4">
@@ -197,31 +193,26 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Class of 2029,Casual,Request Only" data-date="2025-05-20">
+            data-tags="Class of 2029,Casual" data-date="2025-05-20">
             <h2 class="text-lg font-semibold text-slate-800">
                PSU '29 (Alternate)
             </h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
-               Another unofficial Penn State Class of 2029 spot! 🦁 This is a super
+               Another unofficial Penn State Class of 2029 spot! 🦁 This is a
                casual intro group where you can connect with your future
                batchmates. Request to join and dive into the fun!
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">Class of
                   2029</span>
                <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Casual">Casual</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
             </div>
 
             <div class="mt-4">
@@ -233,14 +224,14 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Inactive,Class of 2029,Casual,Request Only" data-date="2025-04-10">
+            data-tags="InClass of 2029,Casual" data-date="2025-04-10">
             <h2 class="text-lg font-semibold text-slate-800">
                Penn State '29 (Inactive)
             </h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                This is an unofficial, casual community for the Penn State Class of
-               2029. While currently inactive, it's still open for request-only
+               2029. While currently in it's still open for request-only
                joins. A good spot to connect with batchmates if it sparks up again!
             </p>
 
@@ -253,10 +244,7 @@
                   2029</span>
                <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Casual">Casual</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
             </div>
 
             <div class="mt-4">
@@ -268,7 +256,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Smeal Students,Class of 2029,Informational,Request Only" data-date="2025-05-20">
+            data-tags="Smeal Students,Class of 2029,Informational" data-date="2025-05-20">
             <h2 class="text-lg font-semibold text-slate-800">Smeal '29</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -278,9 +266,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span class="tag inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Smeal Students">Smeal
                   Students</span>
@@ -290,10 +276,7 @@
                   2029</span>
                <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Informational">Informational</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
             </div>
 
             <div class="mt-4">
@@ -305,7 +288,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Smeal Students,Class of 2029,Casual" data-date="2025-05-20">
+            data-tags="Smeal Students,Class of 2029,Casual" data-date="2025-05-20">
             <h2 class="text-lg font-semibold text-slate-800">
                Smeal '29 (Alternate)
             </h2>
@@ -317,9 +300,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span class="tag inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Smeal Students">Smeal
                   Students</span>
@@ -341,7 +322,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,IST Students,Class of 2029,Casual,Informational" data-date="2025-06-06">
+            data-tags="IST Students,Class of 2029,Casual,Informational" data-date="2025-06-06">
             <h2 class="text-lg font-semibold text-slate-800">
                IST '29
             </h2>
@@ -353,9 +334,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="IST Students">IST
                   Students</span>
@@ -379,7 +358,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Engineering Students,Class of 2029,Informational,Request Only" data-date="2025-05-10">
+            data-tags="Engineering Students,Class of 2029,Informational" data-date="2025-05-10">
             <h2 class="text-lg font-semibold text-slate-800">Engineering '29</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -390,9 +369,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Engineering Students">Engineering
@@ -403,10 +380,7 @@
                   2029</span>
                <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Informational">Informational</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
             </div>
 
             <div class="mt-4">
@@ -418,7 +392,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Engineering Students,Class of 2029,Casual" data-date="2025-05-18">
+            data-tags="Engineering Students,Class of 2029,Casual" data-date="2025-05-18">
             <h2 class="text-lg font-semibold text-slate-800">
                Engineering '29 (Alternate)
             </h2>
@@ -430,9 +404,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-orange-100 text-orange-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Engineering Students">Engineering
@@ -455,7 +427,98 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,International,Class of 2029,Informational,Request Only" data-date="2025-05-20">
+            data-tags="Misc,Class of 2029,Casual" data-date="2025-06-25">
+            <h2 class="text-lg font-semibold text-slate-800">PSU Gym 2029 (Snap)</h2>
+
+            <p class="text-slate-600 text-sm mt-2 flex-grow">
+               A dedicated community for fitness enthusiasts in Penn State's Class of 2029! 🏋️‍♂️ Whether you're into
+               weightlifting, yoga, or just staying this group is the perfect place to connect, share tips, and
+               plan gym sessions together. Join and let's stay fit!
+            </p>
+
+            <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+
+               <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Misc">Misc</span>
+               <span
+                  class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Class of 2029">Class of
+                  2029</span>
+               <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Casual">Casual</span>
+
+            </div>
+
+            <div class="mt-4">
+               <a href="https://snapchat.com/t/ln6IyBFv" target="_blank" rel="noopener noreferrer"
+                  class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
+                  Join Snapchat
+               </a>
+            </div>
+         </div>
+
+         <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
+            data-tags="Misc,Class of 2029,Casual" data-date="2025-06-25">
+            <h2 class="text-lg font-semibold text-slate-800">PSU Gym 2029</h2>
+
+            <p class="text-slate-600 text-sm mt-2 flex-grow">
+               A dedicated community for fitness enthusiasts in Penn State's Class of 2029! 🏋️‍♂️ Whether you're into
+               weightlifting, yoga, or just staying this group is the perfect place to connect, share tips, and
+               plan gym sessions together. Request to join and let's stay fit!
+            </p>
+
+            <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+
+               <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Misc">Misc</span>
+               <span
+                  class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Class of 2029">Class of
+                  2029</span>
+               <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Casual">Casual</span>
+
+            </div>
+
+            <div class="mt-4">
+               <a href="https://ig.me/j/AbbJ3w4SAoXtdAfQ/" target="_blank" rel="noopener noreferrer"
+                  class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
+                  Join Instagram
+               </a>
+            </div>
+         </div>
+
+         <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
+            data-tags="Misc,Girls Only,Casual" data-date="2025-06-25">
+            <h2 class="text-lg font-semibold text-slate-800">Penn State Baddies</h2>
+
+            <p class="text-slate-600 text-sm mt-2 flex-grow">
+               A fun and empowering community for girls in Penn State's Class of 2029! 💃 Whether you're looking to make
+               friends, share experiences, or just vibe, this group is the perfect space to connect and support each
+               other. Request to join and let's celebrate being baddies together!
+            </p>
+
+            <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+
+               <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Misc">Misc</span>
+               <span class="tag inline-block bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Girls Only">Girls Only</span>
+               <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Casual">Casual</span>
+
+            </div>
+
+            <div class="mt-4">
+               <a href="https://ig.me/j/AbZIzYKf4Y3SuyIa/" target="_blank" rel="noopener noreferrer"
+                  class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
+                  Join Instagram
+               </a>
+            </div>
+         </div>
+
+         <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
+            data-tags="International,Class of 2029,Informational" data-date="2025-05-20">
             <h2 class="text-lg font-semibold text-slate-800">UAE '29</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -465,9 +528,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="International">International</span>
@@ -477,10 +538,7 @@
                   2029</span>
                <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Informational">Informational</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
             </div>
 
             <div class="mt-4">
@@ -492,7 +550,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
-            data-tags="Active,Travel Planning,Class of 2029,Informational,Fall 2025" data-date="2025-05-22">
+            data-tags="Travel Planning,Class of 2029,Informational,Fall 2025" data-date="2025-05-22">
             <h2 class="text-lg font-semibold text-slate-800">Mumbai to PSU</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -503,9 +561,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Travel Planning">Travel
@@ -530,7 +586,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
-            data-tags="Active,Travel Planning,Class of 2029,Informational,Fall 2025" data-date="2025-05-23">
+            data-tags="Travel Planning,Class of 2029,Informational,Fall 2025" data-date="2025-05-23">
             <h2 class="text-lg font-semibold text-slate-800">Bengaluru to PSU</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -541,9 +597,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Travel Planning">Travel
@@ -568,7 +622,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,International,Class of 2029,Informational" data-date="2025-05-20">
+            data-tags="International,Class of 2029,Informational" data-date="2025-05-20">
             <h2 class="text-lg font-semibold text-slate-800">
                ICLC (International)
             </h2>
@@ -580,9 +634,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="International">International</span>
@@ -603,7 +655,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Parents Only,Class of 2029,Informational" data-date="2025-04-20">
+            data-tags="Parents Only,Class of 2029,Informational" data-date="2025-04-20">
             <h2 class="text-lg font-semibold text-slate-800">Parents '29</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -613,9 +665,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Parents Only">Parents
                   Only</span>
@@ -636,7 +686,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,CS/DS Students,Class of 2029,Informational,Casual,Request Only" data-date="2025-05-10">
+            data-tags="CS/DS Students,Class of 2029,Informational,Casual" data-date="2025-05-10">
             <h2 class="text-lg font-semibold text-slate-800">CS/DS '29</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -647,9 +697,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span
                   class="tag inline-block bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="CS/DS Students">CS/DS
@@ -662,10 +710,7 @@
                   data-tag="Informational">Informational</span>
                <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Casual">Casual</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
             </div>
 
             <div class="mt-4">
@@ -677,7 +722,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Harrisburg,Class of 2029,Informational,Casual,Request Only" data-date="2025-05-22">
+            data-tags="Harrisburg,Class of 2029,Informational,Casual" data-date="2025-05-22">
             <h2 class="text-lg font-semibold text-slate-800">Harrisburg '29</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -687,9 +732,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Harrisburg">Harrisburg</span>
                <span
@@ -700,10 +743,7 @@
                   data-tag="Informational">Informational</span>
                <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Casual">Casual</span>
-               <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+
             </div>
 
             <div class="mt-4">
@@ -715,7 +755,7 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
-            data-tags="Active,Summer Students,Class of 2029,Informational,Request Only" data-date="2025-05-18">
+            data-tags="Summer Students,Class of 2029,Informational" data-date="2025-05-18">
             <h2 class="text-lg font-semibold text-slate-800">Summer '29</h2>
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
@@ -726,9 +766,7 @@
             </p>
 
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span
-                  class="tag inline-block bg-emerald-100 text-emerald-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Active">Active</span>
+
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Summer Students">Summer
                   Students</span>
@@ -738,10 +776,38 @@
                   2029</span>
                <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Informational">Informational</span>
+
+            </div>
+
+            <div class="mt-4">
+               <a href="https://chat.whatsapp.com/EQgJu6N7Vo6FAnceQb2zE2" target="_blank" rel="noopener noreferrer"
+                  class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
+                  Join WhatsApp
+               </a>
+            </div>
+         </div>
+
+         <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
+            data-tags="Summer Students,Class of 2029,Casual" data-date="2025-05-18">
+            <h2 class="text-lg font-semibold text-slate-800">Summer '29 (Snap)</h2>
+
+            <p class="text-slate-600 text-sm mt-2 flex-grow">
+               Hey, Summer '29 students! ☀️ This unofficial Snapchat GC is
+               specifically for those starting Penn State in the summer. Get
+               informational tips, chat casually, and connect with your early-start
+               peers. Request to join!
+            </p>
+
+            <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
+               <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Summer Students">Summer
+                  Students</span>
                <span
-                  class="tag inline-block bg-amber-100 text-amber-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Request Only">Request
-                  Only</span>
+                  class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Class of 2029">Class of
+                  2029</span>
+               <span class="tag inline-block bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+                  data-tag="Casual">Casual</span>
             </div>
 
             <div class="mt-4">
@@ -757,8 +823,10 @@
 
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                This index is manually maintained and may not include all the available communities. If you know of any
-               other groups, please let us know! Join <a href="https://chat.whatsapp.com/GA5z4nWiwBhH5M2xu44Rsg"
-                  class="font-bold underline">Penn State Community</a> and share the name, description and link to your
+               other groups, please let us know! DM <a href="https://instagram.com/pscindexwebsite"
+                  class="font-bold underline">PSCI on Instagram</a> or Join <a
+                  href="https://chat.whatsapp.com/GA5z4nWiwBhH5M2xu44Rsg" class="font-bold underline">Penn State
+                  Community</a> and share the name, description and link to your
                community.
             </p>
          </div>
