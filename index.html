@@ -113,6 +113,17 @@
          </div>
       </div>
 
+      <div id="instagram-warning-bar"
+         class="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-xl text-yellow-900 text-sm font-medium flex items-center hidden">
+         <svg class="w-5 h-5 mr-2 text-yellow-600 flex-shrink-0" fill="none" stroke="currentColor" stroke-width="2"
+            viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round"
+               d="M12 9v2m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z" />
+         </svg>
+         Note: Instagram opens web links in its in-app browser, which may have issues with invite links. Tap the 3-dot
+         menu at the top right and choose "Open in external browser" for best results.
+      </div>
+
       <!-- Filter Status Display -->
       <div id="filter-status" class="filter-active hidden">
          <div class="flex flex-wrap items-center justify-between gap-4">
@@ -1096,6 +1107,29 @@
          // When navigating back/forward, ensure search bar reflects current state if search is in URL
          filter.loadFromURLAndSearch();
          filter.updateDisplay();
+      });
+
+      function showInstagramWarningIfNeeded() {
+         const ua = navigator.userAgent || "";
+         const isInstagram = ua.includes("Instagram");
+         const warningBar = document.getElementById('instagram-warning-bar');
+         if (isInstagram) {
+            warningBar.classList.remove('hidden');
+         } else {
+            warningBar.classList.add('hidden');
+         }
+      }
+
+      document.addEventListener('DOMContentLoaded', () => {
+         new TagFilter();
+         showInstagramWarningIfNeeded();
+      });
+
+      window.addEventListener('popstate', () => {
+         const filter = new TagFilter();
+         filter.loadFromURLAndSearch();
+         filter.updateDisplay();
+         showInstagramWarningIfNeeded();
       });
    </script>
 </body>
