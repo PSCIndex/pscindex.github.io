@@ -18,6 +18,7 @@
       .pscifont {
          font-family: "Michroma", sans-serif;
          font-style: normal;
+         letter-spacing: 0.15rem;
       }
 
       .tag-scroll {
@@ -57,10 +58,6 @@
          transition: all 0.2s ease;
       }
 
-      .tag:hover {
-         filter: brightness(0.95);
-      }
-
       .hidden {
          display: none !important;
       }
@@ -71,16 +68,6 @@
          border-radius: 8px;
          padding: 16px;
          margin-bottom: 24px;
-      }
-
-      .tag-new {
-         background-color: #fef9c3;
-         color: #875d03;
-      }
-
-      #all-tags-bar .tag {
-         cursor: pointer;
-         transition: all .2s ease;
       }
 
       #all-tags-bar .tag:hover {
@@ -100,7 +87,6 @@
    </header>
 
    <main class="container mx-auto px-4 pb-16">
-      <!-- Search Bar -->
       <div class="mb-6">
          <input type="search" id="search-bar" placeholder="Search by name, tag, or description..."
             class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-150 ease-in-out text-slate-700 placeholder-slate-400 bg-white sm:text-sm" />
@@ -899,7 +885,7 @@
                   const tagContainer = card.querySelector('.tag-scroll');
                   if (tagContainer && !tagContainer.querySelector('[data-tag="Recently Added"]')) {
                      const newTagSpan = document.createElement('span');
-                     newTagSpan.className = 'tag tag-new inline-block text-xs px-2 py-1 rounded-full whitespace-nowrap';
+                     newTagSpan.className = 'tag bg-yellow-100 text-yellow-800 hover:bg-yellow-200 inline-block text-xs px-2 py-1 rounded-full whitespace-nowrap';
                      newTagSpan.dataset.tag = "Recently Added";
                      newTagSpan.textContent = "Recently Added";
                      tagContainer.appendChild(newTagSpan);
@@ -921,7 +907,7 @@
                const tagElement = document.createElement('span');
                tagElement.className = 'tag inline-block bg-slate-100 text-slate-800 text-xs px-2 py-1 rounded-full whitespace-nowrap';
                if (tag === "Recently Added") {
-                  tagElement.classList.add('tag-new');
+                  tagElement.classList.add('bg-yellow-100', 'text-yellow-800', 'hover:bg-yellow-200');
                }
                tagElement.dataset.tag = tag;
                tagElement.textContent = tag;
@@ -1025,7 +1011,7 @@
                const tagElement = document.createElement('span');
                tagElement.className = 'inline-block bg-slate-200 text-slate-800 text-sm px-3 py-1 rounded-full';
                if (tag === "Recently Added") {
-                  tagElement.classList.add('tag-new');
+                  tagElement.classList.add('bg-yellow-100', 'text-yellow-800', 'hover:bg-yellow-200');
                   tagElement.classList.remove('bg-slate-200', 'text-slate-800');
                }
                tagElement.textContent = tag;
@@ -1057,7 +1043,7 @@
                   if (tagElement.dataset.tag !== "Recently Added") {
                      tagElement.classList.add('bg-slate-100');
                   } else {
-                     tagElement.classList.add('tag-new');
+                     tagElement.classList.add('bg-yellow-100', 'text-yellow-800', 'hover:bg-yellow-200');
                   }
                }
             });
