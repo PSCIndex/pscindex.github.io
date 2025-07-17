@@ -2,17 +2,17 @@
 <html lang="en">
 
 <head>
-   <meta charset="UTF-8" />
-   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>PSCI - Penn State Communities Index</title>
-   <meta property="og:title" content="Penn State Communities Index" />
-   <meta property="og:type" content="website" />
-   <meta property="og:url" content="https://pscindex.github.io" />
-   <meta property="og:image" content="https://pscindex.github.io/banner.png" />
-   <link href="./styles.css" rel="stylesheet" />
-   <link rel="preconnect" href="https://fonts.googleapis.com" />
-   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+   <meta property="og:title" content="Penn State Communities Index">
+   <meta property="og:type" content="website">
+   <meta property="og:url" content="https://pscindex.github.io">
+   <meta property="og:image" content="https://pscindex.github.io/banner.png">
+   <link href="./styles.css" rel="stylesheet">
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Michroma&display=swap" rel="stylesheet">
    <style>
       body {
@@ -89,20 +89,17 @@
          Penn State Communities Index
       </p>
    </header>
-
    <main class="container mx-auto px-4 pb-16">
       <div class="mb-6">
          <input type="search" id="search-bar" placeholder="Search by name, tag, or description..."
-            class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-150 ease-in-out text-slate-700 placeholder-slate-400 bg-white sm:text-sm" />
+            class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-150 ease-in-out text-slate-700 placeholder-slate-400 bg-white sm:text-sm">
       </div>
-
       <div id="all-tags-bar" class="mb-6 p-4 border bg-white border-slate-200 rounded-xl">
          <h3 class="text-md font-semibold text-slate-700 mb-3">Filter by Tags:</h3>
          <div id="all-tags-container" class="flex flex-wrap gap-2">
             <!-- Tags will be dynamically populated here -->
          </div>
       </div>
-
       <div id="instagram-warning-bar"
          class="mb-4 p-4 bg-yellow-100 border border-yellow-300 rounded-xl text-yellow-900 text-sm font-medium flex items-center hidden">
          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 mr-2 text-yellow-600 flex-shrink-0" fill="none"
@@ -114,7 +111,6 @@
          Note: Instagram opens web links in its in-app browser, which may have issues with invite links. Tap the 3-dot
          menu at the top right and choose "Open in external browser" for best results.
       </div>
-
       <!-- Filter Status Display -->
       <div id="filter-status" class="filter-active hidden">
          <div class="flex flex-wrap items-center justify-between gap-4">
@@ -128,14 +124,12 @@
             </button>
          </div>
       </div>
-
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="communities-grid">
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="All Students" data-date="2025-04-05">
             <h2 class="text-lg font-semibold text-slate-800">
                Penn State Community
             </h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                This unofficial Penn State group is open to all students (freshmen,
                masters, current, etc.). It's request-only, and an admin may DM you
@@ -143,17 +137,14 @@
                We're a helpful, informational space where everyone supports each
                other. Casual chat is fine, but please stay respectful!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
-
-
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="All Students">All
-                  Students</span>
+                  data-tag="All Students">
+                  All
+                  Students
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://chat.whatsapp.com/GA5z4nWiwBhH5M2xu44Rsg" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -165,23 +156,19 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Class of 2029" data-date="2025-04-10">
             <h2 class="text-lg font-semibold text-slate-800">PSU '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Unofficial Penn State Class of 2029! 🥳 This is where the magic
                happens – get ready to be in your most skibidi form! It's
                request-only, so hit that button to join and let's keep it chaotic
                but respectful. 🤪
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbYpfLmo4M5OsKJD/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -195,23 +182,18 @@
             <h2 class="text-lg font-semibold text-slate-800">
                PSU '29 (Alternate)
             </h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Another unofficial Penn State Class of 2029 spot! 🦁 This is a
                casual intro group where you can connect with your future
                batchmates. Request to join and dive into the fun!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbbgYqBg2D2Z52DH/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -225,28 +207,25 @@
             <h2 class="text-lg font-semibold text-slate-800">
                Penn State '29 (Inactive)
             </h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                This is an unofficial, casual community for the Penn State Class of
                2029. While currently in it's still open for request-only
                joins. A good spot to connect with batchmates if it sparks up again!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Inactive">Inactive</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbbXuyJsbvUv64NI/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
-                  </p> Join Instagram
+                  </p>
+                  Join Instagram
                </a>
             </div>
          </div>
@@ -254,23 +233,21 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029" data-date="2025-07-17">
             <h2 class="text-lg font-semibold text-slate-800">Pollock '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in Pollock Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Residence Halls">Residence
-                  Halls</span>
+                  data-tag="Residence Halls">
+                  Residence Halls
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbYYR43n1tETOuFK/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -282,23 +259,21 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029" data-date="2025-07-17">
             <h2 class="text-lg font-semibold text-slate-800">East '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in East Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Residence Halls">Residence
-                  Halls</span>
+                  data-tag="Residence Halls">
+                  Residence Halls
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbbD2KTLz8q3I9VU/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -310,23 +285,21 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029" data-date="2025-07-17">
             <h2 class="text-lg font-semibold text-slate-800">West '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in West Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Residence Halls">Residence
-                  Halls</span>
+                  data-tag="Residence Halls">
+                  Residence Halls
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbZ8K9Z6xKPkoaK1/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -338,23 +311,21 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029" data-date="2025-07-17">
             <h2 class="text-lg font-semibold text-slate-800">South '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in South Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Residence Halls">Residence
-                  Halls</span>
+                  data-tag="Residence Halls">
+                  Residence Halls
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbbkhcyN4QEXQG4A/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -366,23 +337,21 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029" data-date="2025-07-17">
             <h2 class="text-lg font-semibold text-slate-800">North '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in North Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Residence Halls">Residence
-                  Halls</span>
+                  data-tag="Residence Halls">
+                  Residence Halls
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbZwiR17WCI8FuHK/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -394,26 +363,24 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029,Misc" data-date="2025-07-17">
             <h2 class="text-lg font-semibold text-slate-800">PSU Room Exchange</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                A helpful space for Penn State's Class of 2029 students looking to swap dorm rooms! 🏠 Whether you're
                hoping for a different location, roommate, or setup, this group makes it easy to connect, post your
                current room, and find a better fit. Request to join and let the room hunt begin!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Residence Halls">Residence
-                  Halls</span>
+                  data-tag="Residence Halls">
+                  Residence Halls
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Misc">Misc</span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbaT1IcXzXR-l2_1/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -422,30 +389,25 @@
             </div>
          </div>
 
-
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Smeal Students,Class of 2029" data-date="2025-05-20">
             <h2 class="text-lg font-semibold text-slate-800">Smeal '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Calling all Smeal students in the Class of 2029! 📊 This unofficial
                group is a blend of casual chat and helpful information. It's
                request-only to ensure it stays relevant for Smeal students.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Smeal Students">Smeal
-                  Students</span>
+                  data-tag="Smeal Students">
+                  Smeal Students
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbaJReTRHEtB1w_b/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -459,24 +421,22 @@
             <h2 class="text-lg font-semibold text-slate-800">
                Smeal '29 (Alternate)
             </h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Smeal '29, but make it Snapchat! 👻 This is the even more casual
                version of the Smeal community for the Class of 2029. Expect more
                memes and less formality.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Smeal Students">Smeal
-                  Students</span>
+                  data-tag="Smeal Students">
+                  Smeal Students
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://snapchat.com/t/ZAbNUjb5" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -490,24 +450,20 @@
             <h2 class="text-lg font-semibold text-slate-800">
                IST '29
             </h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                IST '29 Snapchat community! 👩‍💻 This is the casual hangout for
                IST students in the Class of 2029. Expect a mix of fun and
                informal discussions.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="STEM">STEM</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://snapchat.com/t/I9Mq9SvL" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -519,26 +475,21 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="STEM,Class of 2029" data-date="2025-05-10">
             <h2 class="text-lg font-semibold text-slate-800">Engineering '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Future Penn State engineers, Class of 2029! 🛠️ This unofficial group
                is for you. Expect a mix of casual conversation and helpful
                engineering-related info. Request to join and connect with your
                peers.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="STEM">STEM</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbZaQ_XnJJxSTYfx/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -552,23 +503,20 @@
             <h2 class="text-lg font-semibold text-slate-800">
                Engineering '29 (Alternate)
             </h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Engineers of Penn State '29, here's your more casual hang-out spot
                on Snapchat! 🚀 Share your thoughts, memes, and connect with your
                fellow future engineers.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="STEM">STEM</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://snapchat.com/t/zgr33kx4" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -580,25 +528,20 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,Class of 2029" data-date="2025-06-25">
             <h2 class="text-lg font-semibold text-slate-800">PSU Gym 2029 (Snap)</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                A dedicated community for fitness enthusiasts in Penn State's Class of 2029! 🏋️‍♂️ Whether you're into
                weightlifting, yoga, or just staying this group is the perfect place to connect, share tips, and
                plan gym sessions together. Join and let's stay fit!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Misc">Misc</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://snapchat.com/t/ln6IyBFv" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -610,25 +553,20 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,Class of 2029" data-date="2025-06-25">
             <h2 class="text-lg font-semibold text-slate-800">PSU Gym 2029</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                A dedicated community for fitness enthusiasts in Penn State's Class of 2029! 🏋️‍♂️ Whether you're into
                weightlifting, yoga, or just staying this group is the perfect place to connect, share tips, and
                plan gym sessions together. Request to join and let's stay fit!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Misc">Misc</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbbJ3w4SAoXtdAfQ/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -640,25 +578,20 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,Class of 2029" data-date="2025-07-17">
             <h2 class="text-lg font-semibold text-slate-800">PSU Run 2029</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                A dedicated community for runners in Penn State’s Class of 2029! 🏃‍♂️ Whether you’re a seasoned
                marathoner or just starting out, this group is the perfect place to connect, share tips, and plan runs
                together. Request to join and let’s hit the road!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Misc">Misc</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbZz8V3JqE7uvDfy/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -667,27 +600,20 @@
             </div>
          </div>
 
-
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,Girls Only" data-date="2025-06-25">
             <h2 class="text-lg font-semibold text-slate-800">Penn State Baddies</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                A fun and empowering community for girls in Penn State's Class of 2029! 💃 Whether you're looking to make
                friends, share experiences, or just vibe, this group is the perfect space to connect and support each
                other. Request to join and let's celebrate being baddies together!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Misc">Misc</span>
                <span class="tag inline-block bg-rose-100 text-rose-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Girls Only">Girls Only</span>
-
-
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbZIzYKf4Y3SuyIa/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -699,26 +625,21 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="International,Class of 2029" data-date="2025-05-20">
             <h2 class="text-lg font-semibold text-slate-800">UAE '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                An unofficial community for Penn State students from the UAE (Class
                of 2029)! 🇦🇪 Connect with fellow students, share info, and enjoy
                some casual chats. Request to join!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="International">International</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbblzVBVnn7pD8oo/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -730,30 +651,28 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
             data-tags="Travel Planning,Class of 2029,Fall 2025" data-date="2025-05-22">
             <h2 class="text-lg font-semibold text-slate-800">Mumbai to PSU</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Planning your journey from Mumbai to Penn State for Fall 2025? This
                informational WhatsApp group is for Class of 2029 students looking
                to coordinate flights and travel together! Get updates and tips for
                your relocation.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Travel Planning">Travel
-                  Planning</span>
+                  data-tag="Travel Planning">
+                  Travel Planning
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
                <span class="tag inline-block bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Fall 2025">Fall
-                  2025</span>
+                  data-tag="Fall 2025">
+                  Fall 2025
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://chat.whatsapp.com/KJdeJ4IeW2A5ufIXwaYtDg" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -765,30 +684,28 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
             data-tags="Travel Planning,Class of 2029,Fall 2025" data-date="2025-05-23">
             <h2 class="text-lg font-semibold text-slate-800">Bengaluru to PSU</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Planning your journey from Bengaluru to Penn State for Fall 2025? This
                informational Instagram GC is for Class of 2029 students looking
                to coordinate flights and travel together! Get updates and tips for
                your relocation.
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Travel Planning">Travel
-                  Planning</span>
+                  data-tag="Travel Planning">
+                  Travel Planning
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
                <span class="tag inline-block bg-sky-100 text-sky-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Fall 2025">Fall
-                  2025</span>
+                  data-tag="Fall 2025">
+                  Fall 2025
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/Abb_s-mM48cOv_fQ/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -802,25 +719,21 @@
             <h2 class="text-lg font-semibold text-slate-800">
                ICLC (International)
             </h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                This WhatsApp group is for International joining Penn State in the
                Class of 2029. A dedicated space for informational updates and
                support for our Indian community. No request needed!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="International">International</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://chat.whatsapp.com/LEHPPv1sT4i74he7V1G20a" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -832,21 +745,18 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Class of 2029" data-date="2025-04-20">
             <h2 class="text-lg font-semibold text-slate-800">Parents '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                A dedicated WhatsApp group for parents of Penn State Class of 2029
                students. Share information, ask questions, and connect with other
                parents. No request needed!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://chat.whatsapp.com/HNgNFVEETU13pyUjMd6hS0" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -858,27 +768,21 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="STEM,Class of 2029" data-date="2025-05-10">
             <h2 class="text-lg font-semibold text-slate-800">CS/DS '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Calling all Computer Science & Data Science students for Penn State
                Class of 2029! 💻 This unofficial hub is a mix of informational
                discussions, casual chats, and yes, nerdy memes. Be respectful, and
                request to join!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="STEM">STEM</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbakxnmmQAqRmqyN/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -890,26 +794,20 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Alternate Campus,Class of 2029" data-date="2025-05-22">
             <h2 class="text-lg font-semibold text-slate-800">Harrisburg '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Calling all PSU Harrisburg (Class of 2029) students! This unofficial hub is a mix of informational
                discussions
                and casual chats. Be respectful, and request to join!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Alternate Campus">Alternate Campus</span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://ig.me/j/AbbCY5bFulREMaaL/" target="_blank" rel="noopener noreferrer"
                   class="block w-full btn-instagram text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -921,27 +819,24 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Summer Students,Class of 2029" data-date="2025-05-18">
             <h2 class="text-lg font-semibold text-slate-800">Summer '29</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Hey, Summer '29 students! ☀️ This unofficial WhatsApp group is
                specifically for those starting Penn State in the summer. Get
                informational tips, chat casually, and connect with your early-start
                peers. Request to join!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Summer Students">Summer
-                  Students</span>
+                  data-tag="Summer Students">
+                  Summer
+                  Students
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://chat.whatsapp.com/EQgJu6N7Vo6FAnceQb2zE2" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-emerald-600 hover:bg-emerald-700 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -953,25 +848,24 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Summer Students,Class of 2029" data-date="2025-06-25">
             <h2 class="text-lg font-semibold text-slate-800">Summer '29 (Snap)</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Hey, Summer '29 students! ☀️ This unofficial Snapchat GC is
                specifically for those starting Penn State in the summer. Get
                informational tips, chat casually, and connect with your early-start
                peers. Request to join!
             </p>
-
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Summer Students">Summer
-                  Students</span>
+                  data-tag="Summer Students">
+                  Summer
+                  Students
+               </span>
                <span
                   class="tag inline-block bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
-                  data-tag="Class of 2029">Class of
-                  2029</span>
-
+                  data-tag="Class of 2029">
+                  Class of 2029
+               </span>
             </div>
-
             <div class="mt-4">
                <a href="https://snapchat.com/t/vP1rUCno" target="_blank" rel="noopener noreferrer"
                   class="block w-full bg-yellow-500 hover:bg-yellow-600 text-white text-center font-medium py-2 px-4 rounded-lg transition duration-150">
@@ -982,13 +876,16 @@
 
          <div class="rounded-xl border border-slate-200 p-5 flex flex-col community-card" data-tags="">
             <h2 class="text-lg font-semibold text-slate-800">There's more?</h2>
-
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                This index is manually maintained and may not include all the available communities. If you know of any
-               other groups, please let us know! DM <a href="https://instagram.com/psciwebsite"
-                  class="font-bold underline">PSCI on Instagram</a> or Join <a
-                  href="https://chat.whatsapp.com/GA5z4nWiwBhH5M2xu44Rsg" class="font-bold underline">Penn State
-                  Community</a> and share the name, description and link to your
+               other groups, please let us know! DM
+               <a href="https://instagram.com/psciwebsite" class="font-bold underline">PSCI on Instagram</a>
+               or Join
+               <a href="https://chat.whatsapp.com/GA5z4nWiwBhH5M2xu44Rsg" class="font-bold underline">
+                  Penn State
+                  Community
+               </a>
+               and share the name, description and link to your
                community.
             </p>
          </div>
@@ -997,17 +894,20 @@
 
    <footer class="border-t border-slate-200 mt-12">
       <div class="container mx-auto p-4 text-center text-slate-500 text-sm">
-         <p>Made with ❤️ by <a href="https://github.com/XelXen" class="underline">XelXen</a></p>
+         <p>
+            Made with ❤️ by
+            <a href="https://github.com/XelXen" class="underline">XelXen</a>
+         </p>
          <p>
             PSCI is not affiliated with Pennsylvania State University or any of its campuses. This is an unofficial
             initiative aimed towards fostering community and connection among students. The source code for this website
-            is available on <a href="https://github.com/PSCIndex/PSCIndex.github.io"
-               class="underline font-bold">GitHub</a>. All
+            is available on
+            <a href="https://github.com/PSCIndex/PSCIndex.github.io" class="underline font-bold">GitHub</a>
+            . All
             rights reserved.
          </p>
       </div>
    </footer>
-
    <script>
       class TagFilter {
          constructor() {
