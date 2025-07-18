@@ -73,10 +73,6 @@
          padding: 16px;
          margin-bottom: 24px;
       }
-
-      #all-tags-bar .tag:hover {
-         filter: brightness(.95);
-      }
    </style>
 </head>
 
@@ -900,7 +896,8 @@
          </p>
          <p>
             PSCI is not affiliated with Pennsylvania State University or any of its campuses. This is an unofficial
-            initiative maintained by students, and aimed towards fostering community and connection among students. The source code for this website
+            initiative maintained by students, and aimed towards fostering community and connection among students. The
+            source code for this website
             is available on
             <a href="https://github.com/PSCIndex/PSCIndex.github.io" class="underline font-bold">GitHub</a>
             . All
@@ -949,7 +946,7 @@
                   const tagContainer = card.querySelector('.tag-scroll');
                   if (tagContainer && !tagContainer.querySelector('[data-tag="Recently Added"]')) {
                      const newTagSpan = document.createElement('span');
-                     newTagSpan.className = 'tag bg-yellow-100 text-yellow-800 hover:bg-yellow-200 inline-block text-xs px-2 py-1 rounded-full whitespace-nowrap';
+                     newTagSpan.className = 'tag bg-fuchsia-100 text-fuchsia-800 hover:bg-fuchsia-200 inline-block text-xs px-2 py-1 rounded-full whitespace-nowrap';
                      newTagSpan.dataset.tag = "Recently Added";
                      newTagSpan.textContent = "Recently Added";
                      tagContainer.appendChild(newTagSpan);
@@ -969,9 +966,11 @@
             });
             sortedTags.forEach(tag => {
                const tagElement = document.createElement('span');
-               tagElement.className = 'tag inline-block bg-slate-100 text-slate-800 text-xs px-2 py-1 rounded-full whitespace-nowrap';
+               tagElement.className = 'tag inline-block bg-slate-100 text-slate-800 hover:bg-slate-200 text-xs px-2 py-1 rounded-full whitespace-nowrap';
                if (tag === "Recently Added") {
-                  tagElement.classList.add('bg-yellow-100', 'text-yellow-800', 'hover:bg-yellow-200');
+                  tagElement.classList.add('bg-fuchsia-100', 'text-fuchsia-800', 'hover:bg-fuchsia-200');
+                  tagElement.classList.remove('bg-slate-100', 'text-slate-800', 'hover:bg-slate-200');
+
                }
                tagElement.dataset.tag = tag;
                tagElement.textContent = tag;
@@ -1075,8 +1074,8 @@
                const tagElement = document.createElement('span');
                tagElement.className = 'inline-block bg-slate-200 text-slate-800 text-sm px-3 py-1 rounded-full';
                if (tag === "Recently Added") {
-                  tagElement.classList.add('bg-yellow-100', 'text-yellow-800', 'hover:bg-yellow-200');
-                  tagElement.classList.remove('bg-slate-200', 'text-slate-800');
+                  tagElement.classList.add('bg-fuchsia-100', 'text-fuchsia-800', 'hover:bg-fuchsia-200');
+                  tagElement.classList.remove('bg-slate-200', 'text-slate-800', 'hover:bg-slate-300');
                }
                tagElement.textContent = tag;
                activeFiltersContainer.appendChild(tagElement);
@@ -1084,7 +1083,7 @@
 
             if (this.searchTerm.trim()) {
                const searchDisplayElement = document.createElement('span');
-               searchDisplayElement.className = 'inline-block bg-gray-200 text-gray-800 text-sm px-3 py-1 rounded-full';
+               searchDisplayElement.className = 'inline-block bg-slate-200 text-slate-800 text-sm px-3 py-1 rounded-full';
                searchDisplayElement.textContent = `Search: "${this.searchTerm}"`;
                activeFiltersContainer.appendChild(searchDisplayElement);
             }
@@ -1094,20 +1093,21 @@
             const allTagsContainer = document.getElementById('all-tags-container');
             allTagsContainer.querySelectorAll('.tag').forEach(tagElement => {
                if (this.activeTags.has(tagElement.dataset.tag)) {
-                  tagElement.classList.remove('bg-slate-100');
+                  tagElement.classList.remove('bg-slate-100', 'text-slate-800', 'hover:bg-slate-200');
                   if (tagElement.dataset.tag !== "Recently Added") {
                      tagElement.classList.add('bg-blue-100', 'text-blue-800');
                      tagElement.classList.add('ring-2', 'ring-blue-500', 'font-semibold');
                   } else {
-                     tagElement.classList.add('bg-yellow-200', 'text-yellow-800');
-                     tagElement.classList.add('ring-2', 'ring-yellow-500', 'font-semibold');
+                     tagElement.classList.add('bg-fuchsia-200', 'text-fuchsia-800');
+                     tagElement.classList.add('ring-2', 'ring-fuchsia-500', 'font-semibold');
                   }
                } else {
-                  tagElement.classList.remove('ring-2', 'ring-blue-500', 'ring-yellow-500', 'font-semibold', 'bg-blue-100', 'text-blue-800', 'bg-yellow-200', 'text-yellow-800');
+                  tagElement.classList.remove('ring-2', 'ring-blue-500', 'ring-fuchsia-500', 'font-semibold', 'bg-blue-100', 'text-blue-800', 'bg-fuchsia-200', 'text-fuchsia-800');
+
                   if (tagElement.dataset.tag !== "Recently Added") {
                      tagElement.classList.add('bg-slate-100');
                   } else {
-                     tagElement.classList.add('bg-yellow-100', 'text-yellow-800', 'hover:bg-yellow-200');
+                     tagElement.classList.add('bg-fuchsia-100', 'text-fuchsia-800', 'hover:bg-fuchsia-200');
                   }
                }
             });
