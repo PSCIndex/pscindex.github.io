@@ -937,11 +937,11 @@
          processCommunityCardsForNewTag() {
             document.querySelectorAll('.community-card').forEach(card => {
                const dateStr = card.dataset.date;
-               let existingTags = card.dataset.tags ? card.dataset.tags.split(',').map(t => t.trim()) : [];
+               let existingTags = card.dataset.tags ? card.dataset.tags.split(',').map(t => t.trim()).filter(t => t) : [];
+
                if (dateStr && this.isDateWithinLastWeek(dateStr)) {
                   if (!existingTags.includes("Recently Added")) {
                      existingTags.push("Recently Added");
-                     card.dataset.tags = existingTags.join(',');
                   }
                   const tagContainer = card.querySelector('.tag-scroll');
                   if (tagContainer && !tagContainer.querySelector('[data-tag="Recently Added"]')) {
@@ -952,6 +952,22 @@
                      tagContainer.appendChild(newTagSpan);
                   }
                }
+
+               const joinButton = card.querySelector('a[href]');
+               if (joinButton) {
+                  const buttonText = joinButton.textContent.trim().toLowerCase();
+                  if (buttonText.includes('instagram') && !existingTags.includes('Instagram')) {
+                     existingTags.push('Instagram');
+                  }
+                  if (buttonText.includes('whatsapp') && !existingTags.includes('WhatsApp')) {
+                     existingTags.push('WhatsApp');
+                  }
+                  if (buttonText.includes('snapchat') && !existingTags.includes('Snapchat')) {
+                     existingTags.push('Snapchat');
+                  }
+               }
+
+               card.dataset.tags = existingTags.join(',');
                existingTags.forEach(tag => this.allAvailableTags.add(tag));
             });
          }
