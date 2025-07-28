@@ -57,13 +57,12 @@
                #da7d3b);
       }
 
-      .tag {
+      .expired-btn {
+         background: transparent !important;
+         border: 2px dashed #ef4444 !important;
+         color: #ef4444 !important;
+         opacity: 0.6 !important;
          cursor: pointer;
-         transition: all 0.2s ease;
-      }
-
-      .hidden {
-         display: none !important;
       }
 
       .filter-active {
@@ -72,6 +71,15 @@
          border-radius: 8px;
          padding: 16px;
          margin-bottom: 24px;
+      }
+
+      .hidden {
+         display: none !important;
+      }
+
+      .tag {
+         cursor: pointer;
+         transition: all 0.2s ease;
       }
    </style>
 </head>
@@ -107,7 +115,6 @@
          Note: Instagram opens web links in its in-app browser, which may have issues with invite links. Tap the 3-dot
          menu at the top right and choose "Open in external browser" for best results.
       </div>
-      <!-- Filter Status Display -->
       <div id="filter-status" class="filter-active hidden">
          <div class="flex flex-wrap items-center justify-between gap-4">
             <div class="flex flex-wrap items-center gap-2">
@@ -159,7 +166,7 @@
                but respectful. 🤪
             </p>
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -183,7 +190,7 @@
                up again!
             </p>
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -209,7 +216,7 @@
                   data-tag="Residence Halls">
                   Residence Halls
                </span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -234,7 +241,7 @@
                   data-tag="Residence Halls">
                   Residence Halls
                </span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -263,7 +270,7 @@
                   data-tag="Residence Halls">
                   Residence Halls
                </span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -288,7 +295,7 @@
                   data-tag="Residence Halls">
                   Residence Halls
                </span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -313,7 +320,7 @@
                   data-tag="Residence Halls">
                   Residence Halls
                </span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -334,7 +341,7 @@
             data-tags="Residence Halls,Class of 2029,Misc,cid:RoomExchange" data-date="2025-07-17">
             <h2 class="text-lg font-semibold text-slate-800">PSU Room Exchange</h2>
             <p class="text-slate-600 text-sm mt-2 flex-grow">
-               A helpful space for Penn State's Class of 2029 students looking to swap dorm rooms! 🏠 Whether you're
+               A helpful space for Penn State students looking to swap dorm rooms! 🏠 Whether you're
                hoping for a different location, roommate, or setup, this group makes it easy to connect, post your
                current room, and find a better fit. Request to join and let the room hunt begin!
             </p>
@@ -343,7 +350,7 @@
                   data-tag="Residence Halls">
                   Residence Halls
                </span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -367,7 +374,7 @@
                request-only to ensure it stays relevant for Smeal students.
             </p>
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -419,7 +426,7 @@
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="STEM">STEM</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -444,7 +451,7 @@
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="STEM">STEM</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -472,7 +479,7 @@
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Misc">Misc</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -500,7 +507,7 @@
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Misc">Misc</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -545,7 +552,7 @@
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="International">International</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -559,7 +566,8 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
-            data-tags="Travel Planning,Fall 2025,International,cid:MumbaiToPSU" data-date="2025-05-22">
+            data-tags="Travel Planning,Fall 2025,International,cid:MumbaiToPSU" data-date="2025-05-22"
+            data-expiry="2025-08-25">
             <h2 class="text-lg font-semibold text-slate-800">Mumbai to PSU</h2>
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Planning your journey from Mumbai to Penn State for Fall 2025? This
@@ -590,7 +598,8 @@
          </div>
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
-            data-tags="Travel Planning,Fall 2025,International,cid:BengaluruToPSU" data-date="2025-05-23">
+            data-tags="Travel Planning,Fall 2025,International,cid:BengaluruToPSU" data-date="2025-05-23"
+            data-expiry="2025-08-25">
             <h2 class="text-lg font-semibold text-slate-800">Bengaluru to PSU</h2>
             <p class="text-slate-600 text-sm mt-2 flex-grow">
                Planning your journey from Bengaluru to Penn State for Fall 2025? This
@@ -634,7 +643,7 @@
                <span
                   class="tag inline-block bg-green-100 text-green-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="International">International</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -683,7 +692,7 @@
                parents. No request needed!
             </p>
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -708,7 +717,7 @@
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="STEM">STEM</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -732,7 +741,7 @@
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-cyan-100 text-cyan-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="STEM">STEM</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -756,7 +765,7 @@
             <div class="mt-4 overflow-x-auto flex gap-2 tag-scroll pb-2">
                <span class="tag inline-block bg-lime-100 text-lime-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Alternate Campus">Alternate Campus</span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -784,7 +793,7 @@
                   Summer
                   Students
                </span>
-               <span class="tag inline-block bg-red-100 text-red-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
+               <span class="tag inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full whitespace-nowrap"
                   data-tag="Class of 2029">
                   Class of 2029
                </span>
@@ -870,6 +879,31 @@
                const dateStr = card.dataset.date;
                let existingTags = card.dataset.tags ? card.dataset.tags.split(',').map(t => t.trim()).filter(t => t) : [];
 
+               const expiryStr = card.dataset.expiry;
+               let isExpired = false;
+               if (expiryStr) {
+                  const expiryDate = new Date(expiryStr + "T23:59:59");
+                  if (this.currentDate > expiryDate) {
+                     isExpired = true;
+                     if (!existingTags.includes("Deprecated")) {
+                        existingTags.unshift("Deprecated");
+                     }
+
+                     const tagContainer = card.querySelector('.tag-scroll');
+                     if (tagContainer && !tagContainer.querySelector('[data-tag="Deprecated"]')) {
+                        const expiredTagSpan = document.createElement('span');
+                        expiredTagSpan.className = 'tag bg-red-100 text-red-800 inline-block text-xs px-2 py-1 rounded-full whitespace-nowrap';
+                        expiredTagSpan.dataset.tag = "Deprecated";
+                        expiredTagSpan.textContent = "Deprecated";
+                        tagContainer.insertBefore(expiredTagSpan, tagContainer.firstChild);
+                     }
+
+                     card.querySelectorAll('a[href]').forEach(joinButton => {
+                        joinButton.classList.add('expired-btn');
+                     });
+                  }
+               }
+
                if (dateStr && this.isDateWithinLastWeek(dateStr)) {
                   if (!existingTags.includes("Recently Added")) {
                      existingTags.push("Recently Added");
@@ -906,20 +940,19 @@
                const cidTag = existingTags.find(tag => tag.startsWith('cid:'));
                const tagContainer = card.querySelector('.tag-scroll');
                if (cidTag && tagContainer && !tagContainer.querySelector(`[data-tag="${cidTag}"]`)) {
-                  // Create CID tag span
+
                   const cidSpan = document.createElement('span');
                   cidSpan.className = 'tag bg-slate-100 text-slate-800 inline-flex items-center text-xs px-2 py-1 rounded-full whitespace-nowrap';
                   cidSpan.dataset.tag = cidTag;
 
-                  // Share icon SVG
+                  // Icon from Tabler Icons - https://github.com/tabler/tabler-icons/blob/master/LICENSE
                   cidSpan.innerHTML = `
-            <svg class="w-4 h-4 mr-1 text-gray-500 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-               <path d="M8.99903 15.0003L14.999 9.00031M10.999 6.00031L11.462 5.46431C12.3998 4.52663 13.6717 3.99991 14.9979 4C16.3241 4.00009 17.5959 4.527 18.5335 5.46481C19.4712 6.40261 19.9979 7.6745 19.9978 9.00066C19.9977 10.3268 19.4708 11.5986 18.533 12.5363L17.999 13.0003M12.999 18.0003L12.602 18.5343C11.653 19.472 10.3727 19.9979 9.03853 19.9979C7.7044 19.9979 6.42404 19.472 5.47503 18.5343C5.00715 18.072 4.63567 17.5215 4.38213 16.9146C4.1286 16.3077 3.99805 15.6565 3.99805 14.9988C3.99805 14.3411 4.1286 13.6899 4.38213 13.083C4.63567 12.4761 5.00715 11.9256 5.47503 11.4633L5.99903 11.0003" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-            <span class="share-cid-text cursor-pointer text-gray-500">Share</span>
-         `;
+                     <svg class="w-4 h-4 mr-1 text-gray-500 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                        <path d="M8.99903 15.0003L14.999 9.00031M10.999 6.00031L11.462 5.46431C12.3998 4.52663 13.6717 3.99991 14.9979 4C16.3241 4.00009 17.5959 4.527 18.5335 5.46481C19.4712 6.40261 19.9979 7.6745 19.9978 9.00066C19.9977 10.3268 19.4708 11.5986 18.533 12.5363L17.999 13.0003M12.999 18.0003L12.602 18.5343C11.653 19.472 10.3727 19.9979 9.03853 19.9979C7.7044 19.9979 6.42404 19.472 5.47503 18.5343C5.00715 18.072 4.63567 17.5215 4.38213 16.9146C4.1286 16.3077 3.99805 15.6565 3.99805 14.9988C3.99805 14.3411 4.1286 13.6899 4.38213 13.083C4.63567 12.4761 5.00715 11.9256 5.47503 11.4633L5.99903 11.0003" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                     </svg>
+                     <span class="share-cid-text cursor-pointer text-gray-500">Share</span>
+                  `;
 
-                  // Add click handler to copy link
                   cidSpan.addEventListener('click', (e) => {
                      e.stopPropagation();
                      const cidValue = cidTag;
@@ -1139,7 +1172,6 @@
 
       window.addEventListener('popstate', () => {
          const filter = new TagFilter();
-         // When navigating back/forward, ensure search bar reflects current state if search is in URL
          filter.loadFromURLAndSearch();
          filter.updateDisplay();
       });
