@@ -1089,6 +1089,16 @@
          }
 
          updateDisplay() {
+            const isCidFilter = Array.from(this.activeTags).some(tag => tag.startsWith('cid:'));
+            const searchBar = document.getElementById('search-bar');
+            const allTagsBar = document.getElementById('all-tags-bar');
+            if (isCidFilter) {
+                if (searchBar) searchBar.classList.add('hidden');
+                if (allTagsBar) allTagsBar.classList.add('hidden');
+            } else {
+                if (searchBar) searchBar.classList.remove('hidden');
+                if (allTagsBar) allTagsBar.classList.remove('hidden');
+            }
             this.updateFilterStatus();
             this.filterCommunities();
             this.updateAllTagsBarHighlights();
