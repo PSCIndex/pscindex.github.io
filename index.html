@@ -81,6 +81,91 @@
          cursor: pointer;
          transition: all 0.2s ease;
       }
+
+      #dark-mode-toggle {
+         border: none;
+         background: transparent;
+         cursor: pointer;
+         font-size: 1.5rem;
+         margin-top: 10px;
+      }
+
+      /* Dark mode styles */
+      body.dark-mode {
+         background-color: #1e1e1e;
+         color: #e0e0e0;
+      }
+
+      body.dark-mode header,
+      body.dark-mode main,
+      body.dark-mode footer {
+         background-color: #1e1e1e;
+         color: #e0e0e0;
+         border-color: #333;
+      }
+
+      body.dark-mode input,
+      body.dark-mode .filter-active,
+      body.dark-mode #all-tags-bar,
+      body.dark-mode .community-card {
+         background-color: #2a2a2a;
+         border-color: #444;
+         color: #e0e0e0;
+      }
+
+      body.dark-mode .filter-active {
+         background-color: #2a2a2a2a;
+      }
+
+      body.dark-mode input::placeholder {
+         color: #aaa;
+      }
+
+      body.dark-mode .pscifont {
+        color: #72A9EC;
+      }
+
+      body.dark-mode .dark-mode-font-color-0 {
+         color: #B0AA9F;
+      }
+
+      body.dark-mode .dark-mode-font-color-1 {
+         color: #C6D3DF;
+      }
+
+      body.dark-mode .dark-mode-font-color-2 {
+         color: #CCC7C0;
+      }
+
+      body.dark-mode .dark-mode-font-color-3 {
+         color: #D0D0D0;
+      }
+
+      body.dark-mode .tag {
+         background-color: #3a3a3a;
+         color: #d0d0d0;
+      }
+
+      body.dark-mode .tag:hover {
+         background-color: #505050;
+      }
+
+      body.dark-mode .dark-mode-active-filter {
+         background-color: #3a3a3a;
+         color: #d0d0d0;
+      }
+
+      body.dark-mode .expired-btn {
+         background-color: #3b82f6;
+         color: #fff;
+      }
+
+      body.dark-mode .expired-btn {
+         border-color: #ef4444;
+         color: #ef4444;
+         opacity: 0.6;
+      }
+
    </style>
 </head>
 
@@ -89,7 +174,7 @@
       <h1 class="text-3xl md:text-4xl font-bold pscifont text-blue-800">
          PSCI
       </h1>
-      <p class="text-lg text-slate-600 mt-2">
+      <p class="text-lg dark-mode-font-color-0 text-slate-600 mt-2">
          Penn State Communities Index
       </p>
    </header>
@@ -99,7 +184,7 @@
             class="w-full p-3 rounded-xl border border-slate-300 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition duration-150 ease-in-out text-slate-700 placeholder-slate-400 bg-white sm:text-sm">
       </div>
       <div id="all-tags-bar" class="mb-6 p-4 border bg-white border-slate-200 rounded-xl">
-         <h3 class="text-md font-semibold text-slate-700 mb-3">Filter by Tags:</h3>
+         <h3 class="text-md dark-mode-font-color-1 font-semibold text-slate-700 mb-3">Filter by Tags:</h3>
          <div id="all-tags-container" class="flex flex-wrap gap-2">
             <!-- Tags will be dynamically populated here -->
          </div>
@@ -118,11 +203,11 @@
       <div id="filter-status" class="filter-active hidden">
          <div class="flex flex-wrap items-center justify-between gap-4">
             <div class="flex flex-wrap items-center gap-2">
-               <span class="text-slate-700 font-medium">Currently filtering:</span>
+               <span class="text-slate-700 dark-mode-font-color-1 font-medium">Currently filtering:</span>
                <div id="active-filters" class="flex flex-wrap gap-2"></div>
             </div>
             <button id="clear-filters"
-               class="px-4 py-2 bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg text-sm font-medium transition duration-150">
+               class="px-4 py-2 tag bg-slate-200 hover:bg-slate-300 text-slate-800 rounded-lg text-sm font-medium transition duration-150">
                Clear All
             </button>
          </div>
@@ -130,10 +215,10 @@
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="communities-grid">
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="All Students,cid:PSUWhatsapp" data-date="2025-04-05">
-            <h2 class="text-lg font-semibold text-slate-800">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">
                Penn State Community
             </h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                This unofficial Penn State group is open to all students (freshmen,
                masters, current, etc.). It's request-only, and an admin may DM you
                for proof of affiliation (acceptance letter, ID, PSU email, etc.).
@@ -158,8 +243,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Class of 2029,cid:PSU29Insta" data-date="2025-04-10">
-            <h2 class="text-lg font-semibold text-slate-800">PSU '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">PSU '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Unofficial Penn State Class of 2029! 🥳 This is where the magic
                happens – get ready to be in your most skibidi form! It's
                request-only, so hit that button to join and let's keep it chaotic
@@ -181,10 +266,10 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Class of 2029,cid:PSU29Old" data-date="2025-04-10">
-            <h2 class="text-lg font-semibold text-slate-800">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">
                Penn State '29
             </h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                This is THE OG unofficial, casual community for the Penn State Class of
                2029. While currently it may be inactive, it's still a good spot to connect with batchmates if it sparks
                up again!
@@ -206,8 +291,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029,cid:Pollock29" data-date="2025-07-17">
-            <h2 class="text-lg font-semibold text-slate-800">Pollock '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Pollock '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in Pollock Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
@@ -231,8 +316,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029,cid:East29" data-date="2025-07-17">
-            <h2 class="text-lg font-semibold text-slate-800">East '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">East '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in East Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
@@ -260,8 +345,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029,cid:West29" data-date="2025-07-17">
-            <h2 class="text-lg font-semibold text-slate-800">West '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">West '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in West Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
@@ -285,8 +370,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029,cid:South29" data-date="2025-07-17">
-            <h2 class="text-lg font-semibold text-slate-800">South '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">South '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in South Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
@@ -310,8 +395,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029,cid:North29" data-date="2025-07-17">
-            <h2 class="text-lg font-semibold text-slate-800">North '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">North '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Group chat for students living in North Halls at Penn State. A space to connect with hallmates, share
                updates, ask questions, and build community in the heart of campus.
             </p>
@@ -339,8 +424,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Residence Halls,Class of 2029,Misc,cid:RoomExchange" data-date="2025-07-17">
-            <h2 class="text-lg font-semibold text-slate-800">PSU Room Exchange</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">PSU Room Exchange</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                A helpful space for Penn State students looking to swap dorm rooms! 🏠 Whether you're
                hoping for a different location, roommate, or setup, this group makes it easy to connect, post your
                current room, and find a better fit. Request to join and let the room hunt begin!
@@ -367,8 +452,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Class of 2029,cid:Smeal29" data-date="2025-05-20">
-            <h2 class="text-lg font-semibold text-slate-800">Smeal '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Smeal '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Calling all Smeal students in the Class of 2029! 📊 This unofficial
                group is a blend of casual chat and helpful information. It's
                request-only to ensure it stays relevant for Smeal students.
@@ -393,10 +478,10 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,cid:IndianAmerican" data-date="2025-07-20">
-            <h2 class="text-lg font-semibold text-slate-800">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">
                Indian American Community
             </h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                A welcoming space for Indian-origin US students at Penn State! 🤝 Connect, share experiences, and build a
                supportive community. Join us for casual chats and meaningful connections!
             </p>
@@ -415,10 +500,10 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="STEM,Class of 2029,cid:IST29" data-date="2025-06-06">
-            <h2 class="text-lg font-semibold text-slate-800">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">
                IST '29
             </h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                IST '29 Snapchat community! 👩‍💻 This is the casual hangout for
                IST students in the Class of 2029. Expect a mix of fun and
                informal discussions.
@@ -441,8 +526,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="STEM,Class of 2029,cid:Engineering29" data-date="2025-05-10">
-            <h2 class="text-lg font-semibold text-slate-800">Engineering '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Engineering '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Future Penn State engineers, Class of 2029! 🛠️ This unofficial group
                is for you. Expect a mix of casual conversation and helpful
                engineering-related info. Request to join and connect with your
@@ -470,8 +555,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,Class of 2029,cid:Gym29" data-date="2025-06-25">
-            <h2 class="text-lg font-semibold text-slate-800">PSU Gym 2029</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">PSU Gym 2029</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                A dedicated community for fitness enthusiasts in Penn State's Class of 2029! 🏋️‍♂️ Whether you're into
                weightlifting, yoga, or just staying this group is the perfect place to connect, share tips, and
                plan gym sessions together. Request to join and let's stay fit!
@@ -498,8 +583,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,Class of 2029,cid:Run29" data-date="2025-07-17">
-            <h2 class="text-lg font-semibold text-slate-800">PSU Run 2029</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">PSU Run 2029</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                A dedicated community for runners in Penn State’s Class of 2029! 🏃‍♂️ Whether you’re a seasoned
                marathoner or just starting out, this group is the perfect place to connect, share tips, and plan runs
                together. Request to join and let’s hit the road!
@@ -522,8 +607,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,cid:StuLib" data-date="2025-08-04">
-            <h2 class="text-lg font-semibold text-slate-800">PSU Student Library</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">PSU Student Library</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                A dedicated community for students to share and exchange books, notes, and resources at Penn State! 📚
                Whether you’re looking to borrow textbooks/notes or just connect with fellow students, this group is the
                perfect place to do exactly that. Request to join and let’s help each other succeed!
@@ -542,8 +627,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Misc,cid:Baddies" data-date="2025-06-25">
-            <h2 class="text-lg font-semibold text-slate-800">Penn State Baddies</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Penn State Baddies</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                A fun and empowering community for girls in Penn State's Class of 2029! 💃 Whether you're looking to make
                friends, share experiences, or just vibe, this group is the perfect space to connect and support each
                other. Request to join and let's celebrate being baddies together!
@@ -562,8 +647,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="International,Class of 2029,cid:UAE29" data-date="2025-05-20">
-            <h2 class="text-lg font-semibold text-slate-800">UAE '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">UAE '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                An unofficial community for Penn State students from the UAE (Class
                of 2029)! 🇦🇪 Connect with fellow students, share info, and enjoy
                some casual chats. Request to join!
@@ -588,8 +673,8 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
             data-tags="Travel Planning,Fall 2025,International,cid:MumbaiToPSU" data-date="2025-05-22"
             data-expiry="2025-08-25">
-            <h2 class="text-lg font-semibold text-slate-800">Mumbai to PSU</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Mumbai to PSU</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Planning your journey from Mumbai to Penn State for Fall 2025? This
                informational WhatsApp group is for Class of 2029 students looking
                to coordinate flights and travel together! Get updates and tips for
@@ -620,8 +705,8 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
             data-tags="Travel Planning,Fall 2025,International,cid:DelhiToPSU" data-date="2025-08-09"
             data-expiry="2025-08-25">
-            <h2 class="text-lg font-semibold text-slate-800">Delhi to PSU</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Delhi to PSU</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Planning your journey from Delhi to Penn State for Fall 2025? This
                informational Instagram GC is for Class of 2029 students looking
                to coordinate flights and travel together! Get updates and tips for
@@ -652,8 +737,8 @@
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col h-auto community-card"
             data-tags="Travel Planning,Fall 2025,International,cid:BengaluruToPSU" data-date="2025-05-23"
             data-expiry="2025-08-25">
-            <h2 class="text-lg font-semibold text-slate-800">Bengaluru to PSU</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Bengaluru to PSU</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Planning your journey from Bengaluru to Penn State for Fall 2025? This
                informational Instagram GC is for Class of 2029 students looking
                to coordinate flights and travel together! Get updates and tips for
@@ -683,10 +768,10 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="International,Class of 2029,cid:ICLC29" data-date="2025-05-20">
-            <h2 class="text-lg font-semibold text-slate-800">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">
                ICLC '29'
             </h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                This WhatsApp group is for International joining Penn State in the
                Class of 2029. A dedicated space for informational updates and
                support for our Indian community. No request needed!
@@ -710,10 +795,10 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="International,Graduate Students,cid:IGSA" data-date="2025-05-20">
-            <h2 class="text-lg font-semibold text-slate-800">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">
                IGSA Community
             </h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                A WhatsApp group is for all Indian Graduate Students at Penn State. A dedicated space for informational
                updates, networking, and support. Join us to connect with fellow graduate students!
             </p>
@@ -737,8 +822,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Class of 2029,cid:Parents29" data-date="2025-04-20">
-            <h2 class="text-lg font-semibold text-slate-800">Parents '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Parents '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                A dedicated WhatsApp group for parents of Penn State Class of 2029
                students. Share information, ask questions, and connect with other
                parents. No request needed!
@@ -759,8 +844,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="STEM,Class of 2029,cid:CSDS29" data-date="2025-05-10">
-            <h2 class="text-lg font-semibold text-slate-800">CS/DS '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">CS/DS '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Calling all Computer Science & Data Science students for Penn State
                Class of 2029! 💻 This unofficial hub is a mix of informational
                discussions, casual chats, and yes, nerdy memes. Be respectful, and
@@ -784,8 +869,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="STEM,Class of 2029,cid:Premed29" data-date="2025-07-20">
-            <h2 class="text-lg font-semibold text-slate-800">Premed '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Premed '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Future docs, unite! ⚕️ This is the go-to space to stress over orgo together, swap resources, share
                shadowing/internship ops, or just rant about chem labs. Whether you're in it for the MD, DO, or just
                surviving Bio 110 — welcome to the grind (and the memes).
@@ -808,8 +893,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Alternate Campus,Class of 2029,cid:Harrisburg29" data-date="2025-05-22">
-            <h2 class="text-lg font-semibold text-slate-800">Harrisburg '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Harrisburg '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Calling all PSU Harrisburg (Class of 2029) students! This unofficial hub is a mix of informational
                discussions
                and casual chats. Be respectful, and request to join!
@@ -832,8 +917,8 @@
 
          <div class="bg-white rounded-xl border border-slate-200 p-5 flex flex-col community-card"
             data-tags="Summer Students,Class of 2029,cid:Summer29" data-date="2025-05-18">
-            <h2 class="text-lg font-semibold text-slate-800">Summer '29</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">Summer '29</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                Hey, Summer '29 students! ☀️ This unofficial WhatsApp group is
                specifically for those starting Penn State in the summer. Get
                informational tips, chat casually, and connect with your early-start
@@ -863,8 +948,8 @@
          </div>
 
          <div class="rounded-xl border border-slate-200 p-5 flex flex-col community-card" data-tags="">
-            <h2 class="text-lg font-semibold text-slate-800">There's more?</h2>
-            <p class="text-slate-600 text-sm mt-2 flex-grow">
+            <h2 class="dark-mode-font-color-2 text-lg font-semibold text-slate-800">There's more?</h2>
+            <p class="dark-mode-font-color-0 text-slate-600 text-sm mt-2 flex-grow">
                This index is manually maintained and may not include all the available communities. If you know of any
                other groups, please let us know! DM
                <a href="https://instagram.com/psciwebsite" class="font-bold underline">PSCI on Instagram</a>
@@ -881,11 +966,12 @@
    </main>
 
    <footer class="border-t border-slate-200 mt-12">
-      <div class="container mx-auto p-4 text-center text-slate-500 text-sm">
+      <div class="container mx-auto p-4 text-center dark-mode-font-color-0 text-slate-500 text-sm">
          <p>
             Made with ❤️ by
             <a href="https://github.com/XelXen" class="underline">XelXen</a>
          </p>
+
          <p>
             PSCI is not affiliated with Pennsylvania State University or any of its campuses. This is an unofficial
             initiative maintained by students, and aimed towards fostering community and connection among students. The
@@ -895,9 +981,58 @@
             . All
             rights reserved.
          </p>
+
+         <button id="dark-mode-toggle" aria-label="Toggle Dark Mode" class="w-6 h-6 text-gray-600 dark:text-gray-300">
+            <svg id="dark-mode-icon" xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+               <path d="M12 3c.132 0 .263 0 .393 .004a9 9 0 1 0 8.604 8.604c.003 -.13 .003 -.261 .003 -.393a9 9 0 0 1 -9 -9z"/>
+            </svg>
+         </button>
       </div>
    </footer>
-   <script>
+  <script>
+      const darkModeToggle = document.getElementById('dark-mode-toggle');
+      const darkModeIcon = document.getElementById('dark-mode-icon');
+
+      const sunIcon = `
+         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-sun" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <circle cx="12" cy="12" r="4" />
+            <path d="M3 12h1m16 0h1m-9 9v1m0 -20v1m-6.364 14.364l.707 .707m12.02 -12.02l.707 .707m-12.02 0l-.707 .707m12.02 12.02l-.707 .707" />
+         </svg>
+      `;
+
+      const moonIcon = `
+         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-moon" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+            <path d="M12 3c.132 0 .263 0 .393 .004a9 9 0 1 0 8.604 8.604c.003 -.13 .003 -.261 .003 -.393a9 9 0 0 1 -9 -9z"/>
+         </svg>
+      `;
+
+      let savedMode = localStorage.getItem('dark-mode');
+      if (!savedMode) {
+         document.body.classList.add('dark-mode');
+         localStorage.setItem('dark-mode', 'enabled');
+         darkModeIcon.outerHTML = sunIcon;
+      } else if (savedMode === 'enabled') {
+         document.body.classList.add('dark-mode');
+         darkModeIcon.outerHTML = sunIcon;
+      } else {
+         darkModeIcon.outerHTML = moonIcon;
+      }
+
+      darkModeToggle.addEventListener('click', () => {
+         document.body.classList.toggle('dark-mode');
+
+         if (document.body.classList.contains('dark-mode')) {
+            localStorage.setItem('dark-mode', 'enabled');
+            darkModeToggle.innerHTML = sunIcon;
+         } else {
+            localStorage.setItem('dark-mode', 'disabled');
+            darkModeToggle.innerHTML = moonIcon;
+         }
+      });
+
       class TagFilter {
          constructor() {
             this.activeTags = new Set();
@@ -999,10 +1134,10 @@
 
                   // Icon from Tabler Icons - https://github.com/tabler/tabler-icons/blob/master/LICENSE
                   cidSpan.innerHTML = `
-                     <svg class="w-4 h-4 mr-1 text-gray-500 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+                     <svg class="w-4 h-4 mr-1 dark-mode-font-color-3 text-gray-500 cursor-pointer" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
                         <path d="M8.99903 15.0003L14.999 9.00031M10.999 6.00031L11.462 5.46431C12.3998 4.52663 13.6717 3.99991 14.9979 4C16.3241 4.00009 17.5959 4.527 18.5335 5.46481C19.4712 6.40261 19.9979 7.6745 19.9978 9.00066C19.9977 10.3268 19.4708 11.5986 18.533 12.5363L17.999 13.0003M12.999 18.0003L12.602 18.5343C11.653 19.472 10.3727 19.9979 9.03853 19.9979C7.7044 19.9979 6.42404 19.472 5.47503 18.5343C5.00715 18.072 4.63567 17.5215 4.38213 16.9146C4.1286 16.3077 3.99805 15.6565 3.99805 14.9988C3.99805 14.3411 4.1286 13.6899 4.38213 13.083C4.63567 12.4761 5.00715 11.9256 5.47503 11.4633L5.99903 11.0003" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                      </svg>
-                     <span class="share-cid-text cursor-pointer text-gray-500">Share</span>
+                     <span class="share-cid-text dark-mode-font-color-3 cursor-pointer text-gray-500">Share</span>
                   `;
 
                   cidSpan.addEventListener('click', (e) => {
@@ -1151,7 +1286,7 @@
 
             this.activeTags.forEach(tag => {
                const tagElement = document.createElement('span');
-               tagElement.className = 'inline-block bg-slate-200 text-slate-800 text-sm px-3 py-1 rounded-full';
+               tagElement.className = 'inline-block dark-mode-active-filter bg-slate-200 text-slate-800 text-sm px-3 py-1 rounded-full';
                if (tag === "Recently Added") {
                   tagElement.classList.add('bg-fuchsia-100', 'text-fuchsia-800', 'hover:bg-fuchsia-200');
                   tagElement.classList.remove('bg-slate-200', 'text-slate-800', 'hover:bg-slate-300');
