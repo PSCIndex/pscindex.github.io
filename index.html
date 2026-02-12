@@ -1278,7 +1278,8 @@
                const cardTags = card.dataset.tags ? card.dataset.tags.split(',').map(t => t.trim()) : [];
                const isDeprecated = cardTags.includes("Deprecated") || card.dataset.deprecated === "true";
 
-               if (isDeprecated && !this.activeTags.has("Deprecated")) {
+               const isCidFilter = Array.from(this.activeTags).some(tag => tag.startsWith('cid:'));
+               if (isDeprecated && !this.activeTags.has("Deprecated") && !isCidFilter) {
                   isVisible = false;
                }
 
